@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banker - Financial Services</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=50&fit=crop" alt="Banker Logo">
+                </a>
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="active" data-i18n="home">Home</a></li>
+                        <li><a href="products.html" data-i18n="products">Products</a></li>
+                        <li><a href="#about" data-i18n="about">About</a></li>
+                        <li><a href="#services" data-i18n="services">Services</a></li>
+                        <li><a href="#contact" data-i18n="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-buttons">
+                    <button id="langSwitcher" class="btn btn-primary" onclick="switchLanguage()">العربية</button>
+                    <button class="mobile-menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-i18n="heroTitle">Vega Group: Automate Your Life</h1>
+                <p data-i18n="heroSubtitle">Smart Technology & Integrated Systems Since 2009</p>
+              
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop" alt="Vega Group Smart Technology">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="whyChooseUs">Why Choose Us</h2>
+                <p data-i18n="featuresSubtitle">Your trusted partner in smart home and technology solutions</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3 data-i18n="expertTeam">Expert Team</h3>
+                    <p data-i18n="expertTeamDesc">Professional technicians with years of experience in smart home and technology solutions.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-tools"></i>
+                    <h3 data-i18n="qualityService">Quality Service</h3>
+                    <p data-i18n="qualityServiceDesc">Premium installation and maintenance services with guaranteed quality and reliability.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3 data-i18n="support">24/7 Support</h3>
+                    <p data-i18n="supportDesc">Round-the-clock technical support and emergency services for all your needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2><span role="img" aria-label="About">🏢</span> <span data-i18n="aboutTitle">About Us</span></h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop" alt="About Vega Group">
+                </div>
+                <div class="about-text">
+                    <p data-i18n="aboutDescription">Vega Group is a leading provider of smart home solutions and integrated security systems in Egypt. With over a decade of experience, we've partnered with prominent companies, developers, and individuals to implement advanced technological solutions across residential, commercial, and industrial sectors.</p>
+                    <h4 data-i18n="ourServicesSpan">Our services span:</h4>
+                    <ul class="about-services-list">
+                        <li data-i18n="aboutSmartHome">Smart home automation (lighting, climate, curtains, and appliances)</li>
+                        <li data-i18n="aboutSecurity">High-end surveillance systems and security alarms</li>
+                        <li data-i18n="aboutAudio">Central sound systems and internal/external communication</li>
+                        <li data-i18n="aboutNetworks">Computer networks and IT infrastructure</li>
+                        <li data-i18n="aboutSatellite">Satellite and TV systems</li>
+                        <li data-i18n="aboutSolar">Solar energy solutions</li>
+                        <li data-i18n="aboutLighting">Innovative lighting systems</li>
+                    </ul>
+                    <p data-i18n="aboutExclusive">We are the exclusive distributor of Lezn Vega Smart Locks in Alexandria, offering cutting-edge biometric locks that provide security with convenience — using mobile apps, fingerprint access, facial recognition, and more.</p>
+                    <h4 data-i18n="ourClients">Our Clients</h4>
+                    <p data-i18n="aboutClientsDesc">We've proudly served an impressive range of clients, including:</p>
+                    <ul class="about-clients-list">
+                        <li data-i18n="aboutClientsDevelopers">Real estate developers (Marassi, Hacienda, Madinaty, El Gouna)</li>
+                        <li data-i18n="aboutClientsGov">Governmental institutions (Ministry of Interior, Bank Nasser)</li>
+                        <li data-i18n="aboutClientsEdu">Educational and medical entities (Alexandria University, Arab Academy, multiple hospitals)</li>
+                        <li data-i18n="aboutClientsCommercial">Commercial chains (Disney Kids, Oxford Pharmacies, Apple Clothing, Suflaki Restaurants)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="ourServices">Our Services</h2>
+                <h3 data-i18n="servicesSubtitle">We offer comprehensive smart home and technology solutions</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-row">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=400&fit=crop" alt="Smart Home Setup">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-i18n="smartHomeSetup">Smart Home Setup</h3>
+                        <p data-i18n="smartHomeSetupDesc">Integrated control systems for lighting, heating, air conditioning, curtains, and other smart devices for comfort and ease of use.</p>
+                    </div>
+                </div>
+                <div class="service-row">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=400&fit=crop" alt="Security Systems">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-i18n="securitySystems">Security & Monitoring</h3>
+                        <p data-i18n="securitySystemsDesc">Advanced solutions including CCTV installation and maintenance, video intercom systems, theft and fire alarms, and motion, gas, and water sensors for home and business protection.</p>
+                    </div>
+                </div>
+                <div class="service-row">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=400&fit=crop" alt="Smart Locks">
+                        <div class="service-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3 data-i18n="smartLocks">Smart Locks</h3>
+                        <p data-i18n="smartLocksDesc">Modern security solutions through installation and maintenance of smart locks that enable easy and secure access control.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="services-cta">
+                <a href="all-services.html" class="btn btn-primary" data-i18n="viewAllServices">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="contactUs">Contact Us</h2>
+                <p data-i18n="contactSubtitle">Get in touch with our team via whatsapp</p>
+            </div>
+            <div class="contact-content">
+              
+                <div class="whatsapp-contact">
+                    <a href="https://wa.me/201206151914?text=Hello%20I%20have%20a%20question" class="whatsapp-button" target="_blank">
+                        <i class="fab fa-whatsapp"></i> <span data-i18n="contactWhatsApp">Contact Us via WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=50&fit=crop" alt="Banker Logo">
+                    <p data-i18n="smartBanking">Smart banking solutions for everyone.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="quickLinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" data-i18n="home">Home</a></li>
+                        <li><a href="#about" data-i18n="about">About</a></li>
+                        <li><a href="#services" data-i18n="services">Services</a></li>
+                        <li><a href="#contact" data-i18n="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4 data-i18n="followUs">Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Banker. <span data-i18n="rightsReserved">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Services - Smart Home Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all-services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=50&fit=crop" alt="Logo">
+                </a>
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" data-i18n="home">Home</a></li>
+                        <li><a href="products.html" data-i18n="products">Products</a></li>
+                        <li><a href="index.html#about" data-i18n="about">About</a></li>
+                        <li><a href="index.html#services" class="active" data-i18n="services">Services</a></li>
+                        <li><a href="index.html#contact" data-i18n="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-buttons">
+                    <button id="langSwitcher" class="btn btn-secondary" onclick="switchLanguage()">العربية</button>
+                    <button class="mobile-menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- All Services Section -->
+    <section class="all-services">
+        <div class="container">
+            <div class="section-header">
+                <h1 data-i18n="ourServices">Our Services</h1>
+                <p data-i18n="servicesSubtitle">Comprehensive smart home and technology solutions</p>
+            </div>
+            
+            <div class="services-list">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="service-details">
+                        <h2 data-i18n="smartHomeSetup">Smart Home Setup</h2>
+                        <p data-i18n="smartHomeSetupDesc">Integrated control systems for lighting, heating, air conditioning, curtains, and other smart devices for comfort and ease of use.</p>
+                        <ul class="service-features">
+                            <li>Centralized Control System</li>
+                            <li>Smart Device Integration</li>
+                            <li>Voice Control Support</li>
+                            <li>Mobile App Control</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="service-details">
+                        <h2 data-i18n="securitySystems">Security & Monitoring</h2>
+                        <p data-i18n="securitySystemsDesc">Advanced solutions including CCTV installation and maintenance, video intercom systems, theft and fire alarms, and motion, gas, and water sensors for home and business protection.</p>
+                        <ul class="service-features">
+                            <li>24/7 CCTV Monitoring</li>
+                            <li>Smart Motion Detection</li>
+                            <li>Emergency Alert System</li>
+                            <li>Remote Access Control</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="service-details">
+                        <h2 data-i18n="smartLocks">Smart Locks</h2>
+                        <p data-i18n="smartLocksDesc">Modern security solutions through installation and maintenance of smart locks that enable easy and secure access control.</p>
+                        <ul class="service-features">
+                            <li>Biometric Access</li>
+                            <li>Remote Locking/Unlocking</li>
+                            <li>Access History Tracking</li>
+                            <li>Emergency Override</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <div class="service-details">
+                        <h2 data-i18n="audioSystems">Audio & Communication</h2>
+                        <p data-i18n="audioSystemsDesc">Installation of integrated sound systems (sound system) for homes and businesses, along with internal and external communication systems.</p>
+                        <ul class="service-features">
+                            <li>Multi-room Audio</li>
+                            <li>Voice Intercom Systems</li>
+                            <li>Smart Speaker Integration</li>
+                            <li>Custom Sound Zones</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="service-details">
+                        <h2 data-i18n="computerNetworks">Computers & Networks</h2>
+                        <p data-i18n="computerNetworksDesc">Sale and maintenance of computers, networks, network amplifiers, and data centers using advanced technologies like MRT.</p>
+                        <ul class="service-features">
+                            <li>Network Infrastructure</li>
+                            <li>Data Center Solutions</li>
+                            <li>Network Security</li>
+                            <li>Cloud Integration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-satellite"></i>
+                    </div>
+                    <div class="service-details">
+                        <h2 data-i18n="satelliteSystems">Satellite & Receivers</h2>
+                        <p data-i18n="satelliteSystemsDesc">Installation and maintenance of satellite dishes and receiver systems for an excellent viewing experience.</p>
+                        <ul class="service-features">
+                            <li>HD Satellite Installation</li>
+                            <li>Multi-room Setup</li>
+                            <li>Signal Optimization</li>
+                            <li>Regular Maintenance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <div class="service-details">
+                        <h2 data-i18n="solarSolutions">Solar Solutions</h2>
+                        <p data-i18n="solarSolutionsDesc">Installation of solar energy systems for sustainable and environmentally friendly electricity generation.</p>
+                        <ul class="service-features">
+                            <li>Solar Panel Installation</li>
+                            <li>Energy Storage Systems</li>
+                            <li>Grid Integration</li>
+                            <li>Maintenance Services</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="service-details">
+                        <h2 data-i18n="smartLighting">Smart Lighting</h2>
+                        <p data-i18n="smartLightingDesc">Comprehensive smart lighting solutions including indoor and outdoor lighting, automatic lighting systems with motion sensors, and motion-activated stair lighting for innovative and efficient illumination in homes and offices.</p>
+                        <ul class="service-features">
+                            <li>Automated Lighting Control</li>
+                            <li>Motion Sensor Integration</li>
+                            <li>Energy-efficient LED Solutions</li>
+                            <li>Custom Lighting Scenes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=50&fit=crop" alt="Logo">
+                    <p data-i18n="smartBanking">Smart solutions for everyone.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="quickLinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="home">Home</a></li>
+                        <li><a href="index.html#about" data-i18n="about">About</a></li>
+                        <li><a href="index.html#services" data-i18n="services">Services</a></li>
+                        <li><a href="index.html#contact" data-i18n="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4 data-i18n="followUs">Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Smart Solutions. <span data-i18n="rightsReserved">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
