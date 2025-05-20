@@ -50,16 +50,37 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
     height: 40px;
 }
 
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
 .nav-list {
     display: flex;
-    list-style: none;
+    flex-direction: row;
+    align-items: center;
     gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .nav-list a {
@@ -142,6 +163,7 @@ body {
     width: 100%;
     max-width: 500px;
     animation: float 3s ease-in-out infinite;
+    border-radius: 18px;
 }
 
 /* Features Section */
@@ -152,6 +174,11 @@ body {
 
 .section-header {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     margin-bottom: 60px;
 }
 
@@ -394,21 +421,25 @@ body {
 }
 
 @media (max-width: 768px) {
-    .service-content h3 {
-        font-size: 1.6rem;
+    .service-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-
-    .service-content p {
-        font-size: 1rem;
-    }
-
     .service-icon {
-        width: 50px;
-        height: 50px;
+        position: static;
+        margin-bottom: 18px;
+        margin-right: 0;
+        margin-left: 0;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     }
-
-    .service-icon i {
-        font-size: 1.5rem;
+    .service-content {
+        text-align: center;
     }
 }
 
@@ -419,6 +450,12 @@ body {
 
     .service-content h3 {
         font-size: 1.4rem;
+    }
+
+    .service-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 14px;
     }
 }
 
@@ -616,7 +653,7 @@ body {
 
 /* RTL Support */
 [dir="rtl"] {
-    text-align: right;
+    text-align: center;
 }
 
 [dir="rtl"] .nav-list {
@@ -624,53 +661,22 @@ body {
 }
 
 [dir="rtl"] .hero-content {
-    text-align: right;
+    text-align: center;
 }
 
 [dir="rtl"] .feature-card i,
 [dir="rtl"] .service-card {
-    text-align: right;
+    text-align: center;
 }
 
 [dir="rtl"] .contact-form input,
 [dir="rtl"] .contact-form textarea {
-    text-align: right;
+    text-align: center;
 }
 
 [dir="rtl"] .footer-links ul {
     padding-right: 0;
-}
-
-/* Language Switcher */
-#langSwitcher {
-    min-width: 110px;
-    padding: 12px 24px;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 2px solid var(--secondary-color);
-    background: var(--secondary-color);
-    color: var(--white);
-    font-weight: 600;
-    transition: all 0.3s;
-    box-shadow: 0 2px 8px rgba(52,152,219,0.08);
-    cursor: pointer;
-    outline: none;
-    margin-left: 10px;
-    display: inline-block;
-}
-#langSwitcher:hover {
-    background: #217dbb;
-    color: #fff;
-    border-color: #217dbb;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(52,152,219,0.15);
-}
-@media (max-width: 480px) {
-    #langSwitcher {
-        min-width: 80px;
-        padding: 10px 12px;
-        font-size: 0.95rem;
-    }
+    text-align: center;
 }
 
 /* RTL Grid Adjustments */
@@ -688,12 +694,13 @@ body {
 /* RTL Social Icons */
 [dir="rtl"] .social-icons {
     direction: rtl;
+    justify-content: center;
 }
 
 /* RTL Form Elements */
 [dir="rtl"] .contact-form input::placeholder,
 [dir="rtl"] .contact-form textarea::placeholder {
-    text-align: right;
+    text-align: center;
 }
 
 /* RTL Navigation */
@@ -710,12 +717,14 @@ body {
 /* RTL Hero Section */
 [dir="rtl"] .hero-content {
     padding-right: 0;
-    padding-left: 50px;
+    padding-left: 0;
+    text-align: center;
 }
 
 /* RTL Footer */
 [dir="rtl"] .footer-content {
     direction: rtl;
+    text-align: center;
 }
 
 /* RTL Mobile Menu */
@@ -819,15 +828,17 @@ body {
     }
 }
 
-/* RTL Support */
+/* RTL Support for About Section */
 html[dir="rtl"] .about-content {
     flex-direction: row-reverse;
+    text-align: center;
 }
 
 html[dir="rtl"] .about-text ul {
     margin-left: 0;
-    margin-right: 1.5em;
+    margin-right: 0;
     list-style-position: inside;
+    text-align: center;
 }
 
 /* Responsive Design for About Section */
@@ -853,5 +864,36 @@ html[dir="rtl"] .about-text ul {
 
 /* RTL Support for Services */
 [dir="rtl"] .service-card {
-    text-align: right;
+    text-align: center;
+}
+
+/* Center text for content sections only */
+.hero-content,
+.feature-card,
+.service-content,
+.about-text,
+.contact-form,
+.footer-content {
+    text-align: center;
+}
+
+.footer-links ul {
+    text-align: center;
+}
+
+.social-icons {
+    justify-content: center;
+}
+
+/* RTL support for navbar only */
+[dir="rtl"] .navbar {
+    flex-direction: row-reverse;
+}
+[dir="rtl"] .nav-list {
+    flex-direction: row-reverse;
+    gap: 30px;
+}
+[dir="rtl"] .nav-buttons {
+    flex-direction: row-reverse;
+    gap: 10px;
 } 
