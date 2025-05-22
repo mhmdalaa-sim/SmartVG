@@ -63,7 +63,9 @@ body {
 }
 
 .nav-menu {
+    flex: 1;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -486,6 +488,18 @@ body {
     resize: vertical;
 }
 
+.contact .social-section {
+    text-align: center;
+}
+.contact .social-section h4 {
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+}
+.contact .social-icons {
+    justify-content: center !important;
+}
+
 /* Footer */
 .footer {
     background: var(--primary-color);
@@ -570,12 +584,57 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .navbar {
+        position: static;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 10px;
+    }
+    .logo {
+        flex: 0 0 auto;
+    }
     .nav-menu {
         display: none;
+        position: fixed;
+        top: 70px; /* adjust to your header height */
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        z-index: 1001;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        padding: 20px 0;
     }
-
+    .nav-menu.active {
+        display: flex;
+    }
+    .nav-list {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+    }
+    .nav-buttons {
+        gap: 10px;
+    }
+    .btn#langSwitcher {
+        min-width: 90px;
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
     .mobile-menu-btn {
         display: block;
+        margin-left: 10px;
+    }
+    [dir="rtl"] .nav-buttons {
+        flex-direction: row-reverse;
+        gap: 10px;
+        margin: 0 24px 0 0;
+    }
+    [dir="rtl"] .mobile-menu-btn {
+        margin-left: 0;
+        margin-right: 10px;
     }
 
     .hero .container {
@@ -741,74 +800,106 @@ body {
 
 /* About Section Styles */
 .about {
-    padding: 60px 0;
+    padding: 80px 0 80px 0;
     background: transparent;
 }
 
 .about-content {
     display: flex;
     align-items: flex-start;
-    gap: 48px;
-    margin-top: 32px;
+    gap: 56px;
+    margin: 0 auto;
+    max-width: 1100px;
+    background: var(--white);
+    border-radius: 28px;
+    box-shadow: 0 10px 32px rgba(44, 62, 80, 0.10);
+    padding: 48px 48px 40px 48px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .about-image {
-    flex: 1 1 320px;
+    flex: 1 1 340px;
     min-width: 280px;
     max-width: 420px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 0;
 }
 
 .about-image img {
     width: 100%;
     max-width: 400px;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
 }
 
 .about-text {
-    flex: 2 1 400px;
-    min-width: 300px;
-    color: #222;
-    font-size: 1.08rem;
-    line-height: 1.7;
+    flex: 2 1 480px;
+    min-width: 320px;
+    color: #1a2636;
+    font-size: 1.18rem;
+    line-height: 1.8;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    padding: 0 0 0 12px;
 }
 
 .about-text h3, .about-text h4 {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    font-weight: 600;
-    color: #1a3e72;
+    margin-top: 1.2em;
+    margin-bottom: 0.7em;
+    font-weight: 700;
+    color: var(--secondary-color);
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+}
+
+.about-text h4 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
 }
 
 .about-text ul {
-    margin: 0.5em 0 1.5em 1.5em;
+    margin: 0.7em 0 1.5em 1.5em;
     padding: 0;
-    list-style: disc inside;
+    list-style: none;
 }
 
-.about-text ul.about-clients-list {
-    margin-bottom: 0;
+.about-text ul li {
+    position: relative;
+    margin-bottom: 0.7em;
+    padding-left: 1.5em;
+    font-size: 1.05em;
 }
 
-.about-text li {
-    margin-bottom: 0.4em;
-    font-size: 1em;
+.about-text ul li:before {
+    content: '';
+    position: absolute;
+    left: 0.2em;
+    top: 0.7em;
+    width: 0.7em;
+    height: 0.7em;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    display: inline-block;
 }
 
 .about-text p {
-    margin-bottom: 1.1em;
+    margin-bottom: 1.2em;
+    font-size: 1.08em;
 }
 
 .section-header h2 {
     display: flex;
     align-items: center;
     gap: 0.5em;
-    font-size: 2.2rem;
-    font-weight: 700;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    letter-spacing: 0.5px;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    margin-bottom: 32px;
+    justify-content: center;
 }
 
 .section-header h3 {
@@ -822,9 +913,11 @@ body {
         flex-direction: column;
         gap: 32px;
         align-items: stretch;
+        padding: 32px 12px 24px 12px;
     }
     .about-image, .about-text {
         max-width: 100%;
+        padding: 0;
     }
 }
 
@@ -844,15 +937,10 @@ html[dir="rtl"] .about-text ul {
 /* Responsive Design for About Section */
 @media (max-width: 768px) {
     .about-content {
-        grid-template-columns: 1fr;
+        padding: 18px 2vw 12px 2vw;
     }
-
     .about-image {
         order: -1;
-    }
-
-    .about-stats {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -896,4 +984,112 @@ html[dir="rtl"] .about-text ul {
 [dir="rtl"] .nav-buttons {
     flex-direction: row-reverse;
     gap: 10px;
+}
+
+/* Remove bullet points from contact lists */
+.no-bullets, .contact-list, .footer-contact-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Make links in contact sections inherit color and remove underline */
+.no-blue-link, .contact-list a, .footer-contact-list a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.no-blue-link:hover, .contact-list a:hover, .footer-contact-list a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Stylish and larger font for contact section */
+.stylish-contact {
+    font-size: 1.25rem;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    font-weight: 500;
+    background: var(--white);
+    color: #111;
+    border-radius: 24px;
+    padding: 48px 40px 32px 40px;
+    margin-bottom: 32px;
+    box-shadow: 0 10px 30px rgba(44, 62, 80, 0.10);
+    text-align: left;
+}
+.stylish-contact .contact-list {
+    margin-bottom: 32px;
+}
+.stylish-contact .contact-list li {
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.stylish-contact .contact-list i {
+    font-size: 2.2rem;
+    color: var(--white);
+    background: var(--secondary-color);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(52,152,219,0.10);
+}
+.stylish-contact .contact-list a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+}
+.stylish-contact .contact-list a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+.stylish-contact .social-section {
+    margin-top: 32px;
+}
+.stylish-contact .social-section h4 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.stylish-contact .social-icons {
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+.stylish-contact .social-icons a {
+    color: #111 !important;
+    font-size: 2rem;
+    transition: color 0.2s;
+}
+.stylish-contact .social-icons a:hover {
+    color: var(--secondary-color) !important;
+}
+
+/* WhatsApp button already styled, but ensure margin for spacing */
+.whatsapp-contact {
+    margin: 18px 0 0 0;
+}
+
+/* Footer contact links should be white like the rest of the footer */
+.footer-contact-list a {
+    color: var(--white) !important;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.footer-contact-list a:hover {
+    color: var(--secondary-color) !important;
+    text-decoration: underline;
+}
+
+.footer-social {
+    text-align: center;
+}
+.footer-social h4 {
+    margin-bottom: 10px;
+    display: block;
 } 

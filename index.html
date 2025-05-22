@@ -14,7 +14,7 @@
         <div class="container">
             <nav class="navbar">
                 <a href="index.html" class="logo">
-                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=50&fit=crop" alt="Banker Logo">
+                    <img src="images/vega_group_transparent.png" alt="Banker Logo">
                 </a>
                 <div class="nav-menu">
                     <ul class="nav-list">
@@ -26,7 +26,7 @@
                     </ul>
                 </div>
                 <div class="nav-buttons">
-                    <button id="langSwitcher" class="btn btn-primary" onclick="switchLanguage()">العربية</button>
+                    <button id="langSwitcher" class="btn btn-primary" data-i18n="language" onclick="switchLanguage()">العربية</button>
                     <button class="mobile-menu-btn">
                         <span></span>
                         <span></span>
@@ -90,17 +90,6 @@
                 </div>
                 <div class="about-text">
                     <p data-i18n="aboutDescription">Vega Group is a leading provider of smart home solutions and integrated security systems in Egypt. With over a decade of experience, we've partnered with prominent companies, developers, and individuals to implement advanced technological solutions across residential, commercial, and industrial sectors.</p>
-                    <h4 data-i18n="ourServicesSpan">Our services span:</h4>
-                    <ul class="about-services-list">
-                        <li data-i18n="aboutSmartHome">Smart home automation (lighting, climate, curtains, and appliances)</li>
-                        <li data-i18n="aboutSecurity">High-end surveillance systems and security alarms</li>
-                        <li data-i18n="aboutAudio">Central sound systems and internal/external communication</li>
-                        <li data-i18n="aboutNetworks">Computer networks and IT infrastructure</li>
-                        <li data-i18n="aboutSatellite">Satellite and TV systems</li>
-                        <li data-i18n="aboutSolar">Solar energy solutions</li>
-                        <li data-i18n="aboutLighting">Innovative lighting systems</li>
-                    </ul>
-                    <p data-i18n="aboutExclusive">We are the exclusive distributor of Lezn Vega Smart Locks in Alexandria, offering cutting-edge biometric locks that provide security with convenience — using mobile apps, fingerprint access, facial recognition, and more.</p>
                     <h4 data-i18n="ourClients">Our Clients</h4>
                     <p data-i18n="aboutClientsDesc">We've proudly served an impressive range of clients, including:</p>
                     <ul class="about-clients-list">
@@ -169,15 +158,37 @@
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header">
-                <h2 data-i18n="contactUs">Contact Us</h2>
-                <p data-i18n="contactSubtitle">Get in touch with our team via whatsapp</p>
+                <h2 data-i18n="contactTitle">Contact Us</h2>
+                <p data-i18n="contactSubtitle">Get in touch with our team</p>
             </div>
-            <div class="contact-content">
-              
+            <div class="contact-content stylish-contact">
+                <ul class="contact-list no-bullets">
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span data-i18n="contactPhone">Eng. Mohamed Raafat: 01202062000 - Hotline: 01282220220</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-globe"></i>
+                        <a href="https://vega-group.net/" target="_blank" class="no-blue-link">https://vega-group.net/</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:vega.2010@yahoo.com" class="no-blue-link">vega.2010@yahoo.com</a>
+                    </li>
+                </ul>
                 <div class="whatsapp-contact">
                     <a href="https://wa.me/201206151914?text=Hello%20I%20have%20a%20question" class="whatsapp-button" target="_blank">
                         <i class="fab fa-whatsapp"></i> <span data-i18n="contactWhatsApp">Contact Us via WhatsApp</span>
                     </a>
+                </div>
+                <div class="social-section">
+                    <h4 data-i18n="socialMedia">Social Media</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/Vegagroup.smart.home" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/@vegagroup.technology" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/vegagroup.smart" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@vega.group" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -188,8 +199,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=50&fit=crop" alt="Banker Logo">
-                    <p data-i18n="smartBanking">Smart banking solutions for everyone.</p>
+                    <img src="images/vega_group_transparent.png" alt="Vega Group Logo">
+                    <p data-i18n="footerDesc">Smart Technology & Integrated Systems Since 2009</p>
                 </div>
                 <div class="footer-links">
                     <h4 data-i18n="quickLinks">Quick Links</h4>
@@ -200,18 +211,26 @@
                         <li><a href="#contact" data-i18n="contact">Contact</a></li>
                     </ul>
                 </div>
+                <div class="footer-contact">
+                    <h4 data-i18n="contactTitle">Contact Us</h4>
+                    <ul class="footer-contact-list no-bullets">
+                        <li><i class="fas fa-phone-alt"></i> <span data-i18n="contactPhoneShort">01202062000 / 01282220220</span></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:vega.2010@yahoo.com" class="no-blue-link">vega.2010@yahoo.com</a></li>
+                        <li><i class="fas fa-globe"></i> <a href="https://vega-group.net/" target="_blank" class="no-blue-link">vega-group.net</a></li>
+                    </ul>
+                </div>
                 <div class="footer-social">
                     <h4 data-i18n="followUs">Follow Us</h4>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/Vegagroup.smart.home" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/@vegagroup.technology" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/vegagroup.smart" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@vega.group" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Banker. <span data-i18n="rightsReserved">All rights reserved.</span></p>
+                <p>&copy; 2024 Vega Group. <span data-i18n="rights">All Rights Reserved.</span></p>
             </div>
         </div>
     </footer>
