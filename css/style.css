@@ -6,17 +6,17 @@
 }
 
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
+    --primary-color: #053393;
+    --secondary-color: #053393;
     --accent-color: #e74c3c;
     --text-color: #333;
     --light-gray: #f5f6fa;
     --white: #ffffff;
-    --light-blue: #cce5ff;
+    --light-blue: rgba(5, 51, 147, 0.1);
 }
 
 html {
-    background: linear-gradient(120deg, #6dd5fa 0%, #2980b9 100%) !important;
+    background: linear-gradient(120deg, rgba(5, 51, 147, 0.1) 0%, #053393 100%) !important;
     min-height: 100vh;
 }
 
@@ -217,19 +217,19 @@ body {
 
 .feature-card:hover {
     transform: translateY(-12px) scale(1.03);
-    box-shadow: 0 12px 32px rgba(33, 150, 243, 0.18);
-    border: 2px solid #2196f3;
+    box-shadow: 0 12px 32px rgba(5, 51, 147, 0.18);
+    border: 2px solid #053393;
 }
 
 .feature-card i {
     font-size: 2.8rem;
-    color: #2196f3;
+    color: #053393;
     margin-bottom: 20px;
     transition: color 0.3s;
 }
 
 .feature-card:hover i {
-    color: #1565c0;
+    color: #042a7a;
 }
 
 .feature-card h3 {
@@ -262,7 +262,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(52, 152, 219, 0.05) 0%, rgba(44, 62, 80, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(5, 51, 147, 0.05) 0%, rgba(4, 42, 122, 0.05) 100%);
     z-index: 1;
 }
 
@@ -703,7 +703,7 @@ body {
 .whatsapp-button:hover {
     background-color: #128C7E;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.2);
+    box-shadow: 0 5px 15px rgba(5, 51, 147, 0.2);
 }
 
 .whatsapp-button i {
@@ -905,7 +905,7 @@ body {
 .section-header h3 {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #1a3e72;
+    color: #053393;
 }
 
 @media (max-width: 992px) {
@@ -1015,7 +1015,7 @@ html[dir="rtl"] .about-text ul {
     border-radius: 24px;
     padding: 48px 40px 32px 40px;
     margin-bottom: 32px;
-    box-shadow: 0 10px 30px rgba(44, 62, 80, 0.10);
+    box-shadow: 0 10px 30px rgba(5, 51, 147, 0.1);
     text-align: left;
 }
 .stylish-contact .contact-list {
@@ -1037,7 +1037,7 @@ html[dir="rtl"] .about-text ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(52,152,219,0.10);
+    box-shadow: 0 2px 8px rgba(5, 51, 147, 0.1);
 }
 .stylish-contact .contact-list a {
     color: inherit;
@@ -1092,4 +1092,53 @@ html[dir="rtl"] .about-text ul {
 .footer-social h4 {
     margin-bottom: 10px;
     display: block;
+}
+
+.stylish-contact, .about-content, .about-text {
+    box-sizing: border-box;
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+.stylish-contact .contact-list, .about-content, .about-text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.stylish-contact .contact-list i, .about-content i {
+    max-width: 48px;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 32px;
+    height: auto;
+}
+.stylish-contact .contact-list a, .about-text a {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+@media (max-width: 768px) {
+    .stylish-contact, .about-content, .about-text {
+        padding: 10px 2vw 8px 2vw;
+        font-size: 1rem;
+        max-width: 100%;
+    }
+    .stylish-contact .contact-list, .about-content {
+        flex-wrap: wrap;
+    }
+    .stylish-contact .contact-list i, .about-content i {
+        max-width: 36px;
+        min-width: 24px;
+    }
+}
+@media (max-width: 480px) {
+    .stylish-contact, .about-content, .about-text {
+        padding: 6px 2vw 6px 2vw;
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+    .stylish-contact .contact-list i, .about-content i {
+        max-width: 28px;
+        min-width: 18px;
+    }
 } 
