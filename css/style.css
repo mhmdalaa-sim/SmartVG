@@ -16,7 +16,7 @@
 }
 
 html {
-    background: linear-gradient(120deg, rgba(5, 51, 147, 0.1) 0%, #053393 100%) !important;
+    background: #053393 !important;
     min-height: 100vh;
 }
 
@@ -24,7 +24,7 @@ body {
     background: transparent !important;
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
+    color: var(--white);
     min-height: 100vh;
 }
 
@@ -147,13 +147,13 @@ body {
     font-size: 3.5rem;
     line-height: 1.2;
     margin-bottom: 20px;
-    color: var(--primary-color);
+    color: var(--white);
 }
 
 .hero-content p {
     font-size: 1.1rem;
     margin-bottom: 30px;
-    color: #666;
+    color: var(--white);
 }
 
 .hero-buttons {
@@ -186,16 +186,22 @@ body {
 
 .section-header h2 {
     font-size: 2.8rem;
-    color: #1a2636;
+    color: var(--white) !important;
     font-weight: 800;
     letter-spacing: 0.5px;
     font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
 }
 
 .section-header p {
-    color: #222b38;
+    color: var(--white) !important;
     font-size: 1.2rem;
     font-weight: 400;
+}
+
+.section-header h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--white) !important;
 }
 
 .features-grid {
@@ -213,6 +219,7 @@ body {
     transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s, border 0.3s;
     border: 2px solid transparent;
     cursor: pointer;
+    color: #053393;
 }
 
 .feature-card:hover {
@@ -235,13 +242,13 @@ body {
 .feature-card h3 {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #1a2636;
+    color: #053393;
     margin-bottom: 10px;
     font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
 }
 
 .feature-card p {
-    color: #26334d;
+    color: #053393;
     font-size: 1.08rem;
     font-weight: 400;
     font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
@@ -281,13 +288,14 @@ body {
 .service-row {
     display: flex;
     align-items: center;
-    background: var(--white);
+    background: #fff;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.05);
+    color: #053393;
 }
 
 .service-row:hover {
@@ -319,10 +327,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    color: #053393;
 }
 
 .service-content h3 {
-    color: var(--primary-color);
+    color: #053393;
     font-size: 2rem;
     margin: 0;
     position: relative;
@@ -345,7 +354,7 @@ body {
 }
 
 .service-content p {
-    color: #666;
+    color: #053393;
     line-height: 1.8;
     font-size: 1.1rem;
     margin: 0;
@@ -377,8 +386,15 @@ body {
 }
 
 .services-cta .btn {
-    padding: 15px 40px;
-    font-size: 1.1rem;
+    background: #fff;
+    color: #053393;
+    border: 2px solid #053393;
+}
+
+.services-cta .btn:hover {
+    background: #053393;
+    color: #fff;
+    border-color: #053393;
 }
 
 /* RTL Support for Services */
@@ -502,8 +518,8 @@ body {
 
 /* Footer */
 .footer {
-    background: var(--primary-color);
-    color: var(--white);
+    background: #fff;
+    color: #053393;
     padding: 80px 0 20px;
 }
 
@@ -524,7 +540,7 @@ body {
 }
 
 .footer-links a {
-    color: var(--white);
+    color: #053393;
     text-decoration: none;
     margin-bottom: 10px;
     display: inline-block;
@@ -537,7 +553,7 @@ body {
 }
 
 .social-icons a {
-    color: var(--white);
+    color: #053393;
     font-size: 1.5rem;
     transition: color 0.3s ease;
 }
@@ -549,7 +565,7 @@ body {
 .footer-bottom {
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(5, 51, 147, 0.1);
 }
 
 /* Mobile Menu Button */
@@ -810,12 +826,13 @@ body {
     gap: 56px;
     margin: 0 auto;
     max-width: 1100px;
-    background: var(--white);
+    background: #fff;
     border-radius: 28px;
     box-shadow: 0 10px 32px rgba(44, 62, 80, 0.10);
     padding: 48px 48px 40px 48px;
     flex-wrap: wrap;
     justify-content: center;
+    color: #053393;
 }
 
 .about-image {
@@ -838,7 +855,7 @@ body {
 .about-text {
     flex: 2 1 480px;
     min-width: 320px;
-    color: #1a2636;
+    color: #053393;
     font-size: 1.18rem;
     line-height: 1.8;
     font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
@@ -849,14 +866,14 @@ body {
     margin-top: 1.2em;
     margin-bottom: 0.7em;
     font-weight: 700;
-    color: var(--secondary-color);
+    color: #053393;
     font-size: 1.25rem;
     letter-spacing: 0.5px;
 }
 
 .about-text h4 {
     font-size: 1.1rem;
-    color: var(--primary-color);
+    color: #053393;
 }
 
 .about-text ul {
@@ -870,6 +887,7 @@ body {
     margin-bottom: 0.7em;
     padding-left: 1.5em;
     font-size: 1.05em;
+    color: #053393;
 }
 
 .about-text ul li:before {
@@ -887,6 +905,7 @@ body {
 .about-text p {
     margin-bottom: 1.2em;
     font-size: 1.08em;
+    color: #053393;
 }
 
 .section-header h2 {
@@ -895,7 +914,7 @@ body {
     gap: 0.5em;
     font-size: 2.5rem;
     font-weight: 800;
-    color: var(--primary-color);
+    color: #053393;
     letter-spacing: 0.5px;
     font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
     margin-bottom: 32px;
@@ -995,7 +1014,7 @@ html[dir="rtl"] .about-text ul {
 
 /* Make links in contact sections inherit color and remove underline */
 .no-blue-link, .contact-list a, .footer-contact-list a {
-    color: var(--text-color);
+    color: #053393 !important;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s;
@@ -1010,8 +1029,8 @@ html[dir="rtl"] .about-text ul {
     font-size: 1.25rem;
     font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
     font-weight: 500;
-    background: var(--white);
-    color: #111;
+    background: #fff;
+    color: #053393;
     border-radius: 24px;
     padding: 48px 40px 32px 40px;
     margin-bottom: 32px;
@@ -1028,16 +1047,17 @@ html[dir="rtl"] .about-text ul {
     gap: 18px;
 }
 .stylish-contact .contact-list i {
-    font-size: 2.2rem;
-    color: var(--white);
-    background: var(--secondary-color);
+    color: #fff;
+    background: #053393;
+    font-size: 1.4rem;
     border-radius: 50%;
     width: 48px;
     height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(5, 51, 147, 0.1);
+    padding: 8px;
+    box-sizing: border-box;
 }
 .stylish-contact .contact-list a {
     color: inherit;
@@ -1061,7 +1081,7 @@ html[dir="rtl"] .about-text ul {
     margin-top: 10px;
 }
 .stylish-contact .social-icons a {
-    color: #111 !important;
+    color: #053393 !important;
     font-size: 2rem;
     transition: color 0.2s;
 }
@@ -1141,4 +1161,8 @@ html[dir="rtl"] .about-text ul {
         max-width: 28px;
         min-width: 18px;
     }
+}
+
+.services .section-header h2 {
+    color: var(--white) !important;
 } 
