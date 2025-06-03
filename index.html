@@ -20,6 +20,7 @@
                     <ul class="nav-list">
                         <li><a href="index.html" class="active" data-i18n="home">Home</a></li>
                         <li><a href="products.html" data-i18n="products">Products</a></li>
+                        <li><a href="branches.html" data-i18n="branches">Branches</a></li>
                         <li><a href="#about" data-i18n="about">About</a></li>
                         <li><a href="#services" data-i18n="services">Services</a></li>
                         <li><a href="#contact" data-i18n="contact">Contact</a></li>
@@ -154,6 +155,91 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="projects-header">
+                <h2>Our Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-text-box">
+                    <p>With extensive experience in the Egyptian market, Vega Group has distinguished itself by providing advanced solutions across various governorates of Egypt, showcasing its leadership in smart homes, software development, and electronics repair and maintenance.</p>
+                </div>
+                <div class="project-image project-image-top-right">
+                    <img src="images/project1.png" alt="Project 1">
+                </div>
+                <div class="project-image project-image-bottom-left">
+                    <img src="images/project2.png" alt="Project 2">
+                </div>
+                <div class="project-image project-image-bottom-right">
+                    <img src="images/project3.png" alt="Project 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="reviews">Reviews</h2>
+            </div>
+            <div class="reviews-content">
+                <img src="images/Reviews.png" alt="Customer Reviews" class="reviews-image">
+            </div>
+            <div class="reviews-cta">
+                <button class="btn btn-primary" id="openReviewForm">
+                    <i class="fas fa-star"></i> Submit Your Review
+                </button>
+            </div>
+            <!-- Review Form Modal -->
+            <div class="review-modal" id="reviewModal">
+                <div class="review-modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h3>Write Your Review</h3>
+                    <form id="reviewForm" class="review-form">
+                        <div class="form-group">
+                            <label for="reviewerName">Your Name</label>
+                            <input type="text" id="reviewerName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewText">Your Review</label>
+                            <textarea id="reviewText" name="review" rows="4" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Rating</label>
+                            <div class="rating">
+                                <input type="radio" id="star5" name="rating" value="5" required>
+                                <label for="star5"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star4" name="rating" value="4">
+                                <label for="star4"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star3" name="rating" value="3">
+                                <label for="star3"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star2" name="rating" value="2">
+                                <label for="star2"><i class="fas fa-star"></i></label>
+                                <input type="radio" id="star1" name="rating" value="1">
+                                <label for="star1"><i class="fas fa-star"></i></label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Review</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="ourPartners">Our Partners</h2>
+            </div>
+            <div class="partners-content">
+                <img src="images/OurPartners.png" alt="Our Partners" class="partners-image">
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
@@ -177,8 +263,8 @@
                     </li>
                 </ul>
                 <div class="whatsapp-contact">
-                    <a href="https://wa.me/201206151914?text=Hello%20I%20have%20a%20question" class="whatsapp-button" target="_blank">
-                        <i class="fab fa-whatsapp"></i> <span data-i18n="contactWhatsApp">Contact Us via WhatsApp</span>
+                    <a href="https://wa.me/201206151914?text=Hello%20I%20have%20a%20question" class="whatsapp-image-button" target="_blank" style="display:inline-block;">
+                        <img src="images/zizo.png" alt="Contact via WhatsApp" style="height:56px;width:auto;display:block;">
                     </a>
                 </div>
                 <div class="social-section">
@@ -215,8 +301,8 @@
                     <h4 data-i18n="contactTitle">Contact Us</h4>
                     <ul class="footer-contact-list no-bullets">
                         <li><i class="fas fa-phone-alt"></i> <span data-i18n="contactPhoneShort">01202062000 / 01282220220</span></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:vega.2010@yahoo.com" class="no-blue-link">vega.2010@yahoo.com</a></li>
-                        <li><i class="fas fa-globe"></i> <a href="https://vega-group.net/" target="_blank" class="no-blue-link">vega-group.net</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:vega.2010@yahoo.com" class="no-blue-link" style="color:#053393 !important;">vega.2010@yahoo.com</a></li>
+                        <li><i class="fas fa-globe"></i> <a href="https://vega-group.net/" target="_blank" class="no-blue-link" style="color:#053393 !important;">vega-group.net</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">

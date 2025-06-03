@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Branches - Vega Group</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .branches-header {
+            text-align: center;
+            margin: 60px 0 40px 0;
+        }
+        .branches-list {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto 60px auto;
+        }
+        .branch-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+        .branch-image-container {
+            position: relative;
+            min-width: 350px;
+            max-width: 400px;
+        }
+        .branch-image {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+        }
+        .branch-marker {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -30%);
+            font-size: 64px;
+            color: #000;
+            opacity: 0.9;
+            pointer-events: none;
+        }
+        .branch-info {
+            flex: 1;
+            color: #fff;
+            font-size: 1.15rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        @media (max-width: 900px) {
+            .branch-row {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            .branch-image-container {
+                min-width: 0;
+                max-width: 100%;
+                width: 100%;
+            }
+            .branch-info {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/vega_group_transparent.png" alt="Banker Logo">
+                </a>
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" data-i18n="home">Home</a></li>
+                        <li><a href="products.html" data-i18n="products">Products</a></li>
+                        <li><a href="branches.html" class="active" data-i18n="branches">Branches</a></li>
+                        <li><a href="index.html#about" data-i18n="about">About</a></li>
+                        <li><a href="index.html#services" data-i18n="services">Services</a></li>
+                        <li><a href="index.html#contact" data-i18n="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-buttons">
+                    <button id="langSwitcher" class="btn btn-primary" data-i18n="language" onclick="switchLanguage()">العربية</button>
+                    <button class="mobile-menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main style="margin-top:120px;">
+        <div class="branches-header">
+            <h1 style="color:#fff;font-size:2.5rem;font-weight:800;">Our Branches</h1>
+        </div>
+        <div class="branches-list">
+            <div class="branch-row">
+                <div class="branch-image-container">
+                    <img src="images/branch1.png" alt="Branch 1" class="branch-image">
+                    <span class="branch-marker"><i class="fas fa-map-marker-alt"></i></span>
+                </div>
+                <div class="branch-info">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+                </div>
+            </div>
+            <div class="branch-row">
+                <div class="branch-image-container">
+                    <img src="images/branch 2.png" alt="Branch 2" class="branch-image">
+                    <span class="branch-marker"><i class="fas fa-map-marker-alt"></i></span>
+                </div>
+                <div class="branch-info">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+                </div>
+            </div>
+            <div class="branch-row">
+                <div class="branch-image-container">
+                    <img src="images/branch 3.png" alt="Branch 3" class="branch-image">
+                    <span class="branch-marker"><i class="fas fa-map-marker-alt"></i></span>
+                </div>
+                <div class="branch-info">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/vega_group_transparent.png" alt="Vega Group Logo">
+                    <p data-i18n="footerDesc">Smart Technology & Integrated Systems Since 2009</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="quickLinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home" data-i18n="home">Home</a></li>
+                        <li><a href="index.html#about" data-i18n="about">About</a></li>
+                        <li><a href="index.html#services" data-i18n="services">Services</a></li>
+                        <li><a href="index.html#contact" data-i18n="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-i18n="contactTitle">Contact Us</h4>
+                    <ul class="footer-contact-list no-bullets">
+                        <li><i class="fas fa-phone-alt"></i> <span data-i18n="contactPhoneShort">01202062000 / 01282220220</span></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:vega.2010@yahoo.com" class="no-blue-link" style="color:#053393 !important;">vega.2010@yahoo.com</a></li>
+                        <li><i class="fas fa-globe"></i> <a href="https://vega-group.net/" target="_blank" class="no-blue-link" style="color:#053393 !important;">vega-group.net</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4 data-i18n="followUs">Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/Vegagroup.smart.home" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/@vegagroup.technology" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/vegagroup.smart" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@vega.group" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Vega Group. <span data-i18n="rights">All Rights Reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
+</body>
+</html> 

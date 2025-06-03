@@ -143,11 +143,27 @@ const pageNumbers = document.getElementById('pageNumbers');
 // Calculate total pages
 const totalPages = Math.ceil(products.length / itemsPerPage);
 
+let filteredProducts = products;
+
+// Search functionality
+const productSearchInput = document.getElementById('productSearchInput');
+if (productSearchInput) {
+    productSearchInput.addEventListener('input', function() {
+        const query = this.value.trim().toLowerCase();
+        const currentLang = localStorage.getItem('language') || 'en';
+        filteredProducts = products.filter(product =>
+            product.title[currentLang].toLowerCase().includes(query)
+        );
+        currentPage = 1;
+        displayProducts();
+    });
+}
+
 // Function to display products for current page
 function displayProducts() {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    const currentProducts = products.slice(startIndex, endIndex);
+    const currentProducts = filteredProducts.slice(startIndex, endIndex);
     const currentLang = localStorage.getItem('language') || 'en';
 
     productsGrid.innerHTML = currentProducts.map((product, index) => {
@@ -168,15 +184,16 @@ function displayProducts() {
     }).join('');
 
     // Update pagination buttons
+    const totalFilteredPages = Math.ceil(filteredProducts.length / itemsPerPage) || 1;
     prevPageBtn.disabled = currentPage === 1;
-    nextPageBtn.disabled = currentPage === totalPages;
+    nextPageBtn.disabled = currentPage === totalFilteredPages;
 
     // Update page numbers
-    updatePageNumbers();
+    updatePageNumbers(totalFilteredPages);
 }
 
 // Function to update page numbers
-function updatePageNumbers() {
+function updatePageNumbers(totalFilteredPages = Math.ceil(filteredProducts.length / itemsPerPage) || 1) {
     const currentLang = localStorage.getItem('language') || 'en';
     let pageNumbersHTML = '';
     
@@ -189,18 +206,18 @@ function updatePageNumbers() {
     }
     
     // Show pages around current page
-    for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
+    for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalFilteredPages - 1, currentPage + 1); i++) {
         pageNumbersHTML += `<span class="page-number ${currentPage === i ? 'active' : ''}" data-page="${i}">${i}</span>`;
     }
     
     // Show ellipsis if needed
-    if (currentPage < totalPages - 2) {
+    if (currentPage < totalFilteredPages - 2) {
         pageNumbersHTML += '<span class="page-number">...</span>';
     }
     
     // Always show last page if there's more than one page
-    if (totalPages > 1) {
-        pageNumbersHTML += `<span class="page-number ${currentPage === totalPages ? 'active' : ''}" data-page="${totalPages}">${totalPages}</span>`;
+    if (totalFilteredPages > 1) {
+        pageNumbersHTML += `<span class="page-number ${currentPage === totalFilteredPages ? 'active' : ''}" data-page="${totalFilteredPages}">${totalFilteredPages}</span>`;
     }
     
     pageNumbers.innerHTML = pageNumbersHTML;

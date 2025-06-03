@@ -149,4 +149,50 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     `;
     document.head.appendChild(style);
-}); 
+});
+
+// Review Modal Functionality
+const reviewModal = document.getElementById('reviewModal');
+const openReviewForm = document.getElementById('openReviewForm');
+const closeModal = document.querySelector('.close-modal');
+const reviewForm = document.getElementById('reviewForm');
+
+if (openReviewForm && reviewModal) {
+    openReviewForm.addEventListener('click', () => {
+        reviewModal.classList.add('active');
+    });
+
+    closeModal.addEventListener('click', () => {
+        reviewModal.classList.remove('active');
+    });
+
+    // Close modal when clicking outside
+    reviewModal.addEventListener('click', (e) => {
+        if (e.target === reviewModal) {
+            reviewModal.classList.remove('active');
+        }
+    });
+
+    // Handle form submission
+    reviewForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(reviewForm);
+        const reviewData = {
+            name: formData.get('name'),
+            review: formData.get('review'),
+            rating: formData.get('rating')
+        };
+
+        // Here you would typically send the review data to your server
+        console.log('Review submitted:', reviewData);
+        
+        // Show success message
+        alert('Thank you for your review!');
+        
+        // Reset form and close modal
+        reviewForm.reset();
+        reviewModal.classList.remove('active');
+    });
+} 
