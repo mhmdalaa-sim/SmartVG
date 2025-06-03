@@ -1,7 +1,8 @@
-// Product data with translations
+// Product data with translations and categories
 const products = [
     {
         id: 'smart-home-package',
+        category: 'Smart Home',
         title: {
             en: 'Smart Home Package',
             ar: 'باقة المنزل الذكي'
@@ -18,6 +19,7 @@ const products = [
     },
     {
         id: 'security-system',
+        category: 'Security',
         title: {
             en: 'Security System',
             ar: 'نظام الأمان'
@@ -34,6 +36,7 @@ const products = [
     },
     {
         id: 'smart-lock',
+        category: 'Security',
         title: {
             en: 'Smart Lock',
             ar: 'قفل ذكي'
@@ -50,6 +53,7 @@ const products = [
     },
     {
         id: 'audio-system',
+        category: 'Audio',
         title: {
             en: 'Audio System',
             ar: 'نظام صوتي'
@@ -66,6 +70,7 @@ const products = [
     },
     {
         id: 'network-solution',
+        category: 'Networking',
         title: {
             en: 'Network Solution',
             ar: 'حل شبكات'
@@ -82,6 +87,7 @@ const products = [
     },
     {
         id: 'satellite-system',
+        category: 'Satellite',
         title: {
             en: 'Satellite System',
             ar: 'نظام أقمار صناعية'
@@ -98,6 +104,7 @@ const products = [
     },
     {
         id: 'solar-system',
+        category: 'Solar',
         title: {
             en: 'Solar System',
             ar: 'نظام طاقة شمسية'
@@ -114,6 +121,7 @@ const products = [
     },
     {
         id: 'smart-lighting',
+        category: 'Smart Home',
         title: {
             en: 'Smart Lighting',
             ar: 'إضاءة ذكية'
@@ -127,6 +135,75 @@ const products = [
             ar: 'تبدأ من ٦٠٠ دولار'
         },
         image: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=400&fit=crop'
+    },
+    // Additional products for better filter visibility
+    {
+        id: 'wifi-router',
+        category: 'Networking',
+        title: {
+            en: 'WiFi Router',
+            ar: 'راوتر واي فاي'
+        },
+        description: {
+            en: 'High-speed WiFi router for home and office use.',
+            ar: 'راوتر واي فاي عالي السرعة للاستخدام المنزلي والمكتبي.'
+        },
+        price: {
+            en: 'Starting from $120',
+            ar: 'تبدأ من ١٢٠ دولار'
+        },
+        image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=600&h=400&fit=crop'
+    },
+    {
+        id: 'solar-battery',
+        category: 'Solar',
+        title: {
+            en: 'Solar Battery',
+            ar: 'بطارية شمسية'
+        },
+        description: {
+            en: 'Long-lasting battery for solar energy storage.',
+            ar: 'بطارية طويلة العمر لتخزين الطاقة الشمسية.'
+        },
+        price: {
+            en: 'Starting from $350',
+            ar: 'تبدأ من ٣٥٠ دولار'
+        },
+        image: 'https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=600&h=400&fit=crop'
+    },
+    {
+        id: 'doorbell-camera',
+        category: 'Security',
+        title: {
+            en: 'Doorbell Camera',
+            ar: 'كاميرا جرس الباب'
+        },
+        description: {
+            en: 'Smart doorbell camera with mobile notifications.',
+            ar: 'جرس باب ذكي مع كاميرا وإشعارات على الجوال.'
+        },
+        price: {
+            en: 'Starting from $90',
+            ar: 'تبدأ من ٩٠ دولار'
+        },
+        image: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?w=600&h=400&fit=crop'
+    },
+    {
+        id: 'bluetooth-speaker',
+        category: 'Audio',
+        title: {
+            en: 'Bluetooth Speaker',
+            ar: 'سماعة بلوتوث'
+        },
+        description: {
+            en: 'Portable Bluetooth speaker with high-quality sound.',
+            ar: 'سماعة بلوتوث محمولة بصوت عالي الجودة.'
+        },
+        price: {
+            en: 'Starting from $60',
+            ar: 'تبدأ من ٦٠ دولار'
+        },
+        image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&h=400&fit=crop'
     }
 ];
 
@@ -147,15 +224,54 @@ let filteredProducts = products;
 
 // Search functionality
 const productSearchInput = document.getElementById('productSearchInput');
+
+// Add button list filter logic
+const categoryFilterList = document.getElementById('categoryFilterList');
+let selectedCategory = 'all';
+
+function renderCategoryFilter() {
+    if (!categoryFilterList) return;
+    const categories = Array.from(new Set(products.map(p => p.category)));
+    const lang = localStorage.getItem('language') || 'en';
+    const categoryI18n = {
+        'Smart Home': 'categorySmartHome',
+        'Security': 'categorySecurity',
+        'Audio': 'categoryAudio',
+        'Networking': 'categoryNetworking',
+        'Satellite': 'categorySatellite',
+        'Solar': 'categorySolar'
+    };
+    const allBtn = `<button class="category-filter-btn${selectedCategory === 'all' ? ' selected' : ''}" data-category="all">${translations[lang].allCategories || 'All Categories'}</button>`;
+    const btns = categories.map(cat => {
+        const label = translations[lang][categoryI18n[cat]] || cat;
+        return `<button class="category-filter-btn${selectedCategory === cat ? ' selected' : ''}" data-category="${cat}">${label}</button>`;
+    }).join('');
+    categoryFilterList.innerHTML = allBtn + btns;
+    // Add event listeners
+    Array.from(categoryFilterList.querySelectorAll('.category-filter-btn')).forEach(btn => {
+        btn.onclick = function() {
+            selectedCategory = this.getAttribute('data-category');
+            renderCategoryFilter();
+            filterProducts();
+        };
+    });
+}
+
+function filterProducts() {
+    const query = productSearchInput ? productSearchInput.value.trim().toLowerCase() : '';
+    const currentLang = localStorage.getItem('language') || 'en';
+    filteredProducts = products.filter(product => {
+        const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
+        const matchesSearch = product.title[currentLang].toLowerCase().includes(query);
+        return matchesCategory && matchesSearch;
+    });
+    currentPage = 1;
+    displayProducts();
+}
+
 if (productSearchInput) {
     productSearchInput.addEventListener('input', function() {
-        const query = this.value.trim().toLowerCase();
-        const currentLang = localStorage.getItem('language') || 'en';
-        filteredProducts = products.filter(product =>
-            product.title[currentLang].toLowerCase().includes(query)
-        );
-        currentPage = 1;
-        displayProducts();
+        filterProducts();
     });
 }
 
@@ -165,16 +281,26 @@ function displayProducts() {
     const endIndex = startIndex + itemsPerPage;
     const currentProducts = filteredProducts.slice(startIndex, endIndex);
     const currentLang = localStorage.getItem('language') || 'en';
+    const productI18n = {
+        'WiFi Router': 'wifiRouter',
+        'Solar Battery': 'solarBattery',
+        'Doorbell Camera': 'doorbellCamera',
+        'Bluetooth Speaker': 'bluetoothSpeaker'
+    };
 
     productsGrid.innerHTML = currentProducts.map((product, index) => {
         const actualIndex = startIndex + index;
+        let title = product.title[currentLang];
+        if (productI18n[product.title.en] && translations[currentLang][productI18n[product.title.en]]) {
+            title = translations[currentLang][productI18n[product.title.en]];
+        }
         return `
             <div class="product-card">
                 <div class="product-image">
-                    <img src="${product.image}" alt="${product.title[currentLang]}">
+                    <img src="${product.image}" alt="${title}">
                 </div>
                 <div class="product-content">
-                    <h3>${product.title[currentLang]}</h3>
+                    <h3>${title}</h3>
                     <p class="product-description">${product.description[currentLang]}</p>
                     <div class="product-price">${product.price[currentLang]}</div>
                     <a href="product-details.html?id=${product.id}" class="btn btn-primary" data-i18n="learnMore">${translations[currentLang].learnMore}</a>
@@ -249,7 +375,11 @@ pageNumbers.addEventListener('click', (e) => {
 });
 
 // Initialize the page
-document.addEventListener('DOMContentLoaded', displayProducts);
+document.addEventListener('DOMContentLoaded', () => {
+    renderCategoryFilter();
+    filteredProducts = products;
+    displayProducts();
+});
 
 // Update products when language changes
 document.addEventListener('languageChanged', () => {

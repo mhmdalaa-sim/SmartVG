@@ -41,31 +41,37 @@
 
     <!-- Products Section -->
     <section class="products-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-i18n="ourProducts">Our Products</h2>
-                <p data-i18n="productsSubtitle">Explore our range of financial products and services</p>
-            </div>
-            <div class="products-search-bar" style="text-align:center;margin-bottom:24px;">
-                <div class="search-input-wrapper" style="position:relative;display:inline-block;width:320px;max-width:100%;">
-                    <input type="text" id="productSearchInput" placeholder="Search products by name..." style="width: 100%; padding: 10px 16px 10px 40px; border-radius: 6px; border: 1px solid #ccc; font-size: 1.1rem;">
-                    <i class="fas fa-search" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;font-size:1.1rem;"></i>
+        <div class="container products-flex-layout">
+            <aside class="products-sidebar">
+                <h3 class="sidebar-title">Categories</h3>
+                <div id="categoryFilterList" class="sidebar-category-list"></div>
+            </aside>
+            <main class="products-main-content">
+                <div class="section-header">
+                    <h2 data-i18n="ourProducts">Our Products</h2>
+                    <p data-i18n="productsSubtitle">Explore our range of financial products and services</p>
                 </div>
-            </div>
-            <div class="products-grid" id="productsGrid">
-                <!-- Products will be loaded dynamically -->
-            </div>
-            <div class="pagination">
-                <button id="prevPage" class="pagination-btn" disabled>
-                    <i class="fas fa-chevron-left"></i> <span data-i18n="previous">Previous</span>
-                </button>
-                <div class="page-numbers" id="pageNumbers">
-                    <!-- Page numbers will be generated dynamically -->
+                <div class="products-search-bar" style="text-align:center;margin-bottom:24px;">
+                    <div class="search-input-wrapper" style="position:relative;display:inline-block;width:320px;max-width:100%;">
+                        <input type="text" id="productSearchInput" placeholder="Search products by name..." style="width: 100%; padding: 10px 16px 10px 40px; border-radius: 6px; border: 1px solid #ccc; font-size: 1.1rem;">
+                        <i class="fas fa-search" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#888;font-size:1.1rem;"></i>
+                    </div>
                 </div>
-                <button id="nextPage" class="pagination-btn">
-                    <span data-i18n="next">Next</span> <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+                <div class="pagination">
+                    <button id="prevPage" class="pagination-btn" disabled>
+                        <i class="fas fa-chevron-left"></i> <span data-i18n="previous">Previous</span>
+                    </button>
+                    <div class="page-numbers" id="pageNumbers">
+                        <!-- Page numbers will be generated dynamically -->
+                    </div>
+                    <button id="nextPage" class="pagination-btn">
+                        <span data-i18n="next">Next</span> <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </main>
         </div>
     </section>
 
