@@ -195,4 +195,158 @@ if (openReviewForm && reviewModal) {
         reviewForm.reset();
         reviewModal.classList.remove('active');
     });
-} 
+}
+
+// Vertical Services Section Functionality
+const servicesData = [
+    {
+        image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80',
+        icon: 'fa-home',
+        title: 'Smart Home Setup',
+        desc: 'Integrated control systems for lighting, heating, air conditioning, curtains, and other smart devices for comfort and ease of use.',
+        i18nTitle: 'smartHomeSetup',
+        i18nDesc: 'smartHomeSetupDesc',
+        features: [
+            { i18n: 'centralizedControl', text: 'Centralized Control System' },
+            { i18n: 'smartDeviceIntegration', text: 'Smart Device Integration' },
+            { i18n: 'voiceControlSupport', text: 'Voice Control Support' },
+            { i18n: 'mobileAppControl', text: 'Mobile App Control' }
+        ]
+    },
+    {
+        image: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80',
+        icon: 'fa-shield-alt',
+        title: 'Security & Monitoring',
+        desc: 'Advanced solutions including CCTV installation and maintenance, video intercom systems, theft and fire alarms, and motion, gas, and water sensors for home and business protection.',
+        i18nTitle: 'securitySystems',
+        i18nDesc: 'securitySystemsDesc',
+        features: [
+            { i18n: 'cctvMonitoring', text: '24/7 CCTV Monitoring' },
+            { i18n: 'smartMotionDetection', text: 'Smart Motion Detection' },
+            { i18n: 'emergencyAlertSystem', text: 'Emergency Alert System' },
+            { i18n: 'remoteAccessControl', text: 'Remote Access Control' }
+        ]
+    },
+    {
+        image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80',
+        icon: 'fa-lock',
+        title: 'Smart Locks',
+        desc: 'Modern security solutions through installation and maintenance of smart locks that enable easy and secure access control.',
+        i18nTitle: 'smartLocks',
+        i18nDesc: 'smartLocksDesc',
+        features: [
+            { i18n: 'biometricAccess', text: 'Biometric Access' },
+            { i18n: 'remoteLocking', text: 'Remote Locking/Unlocking' },
+            { i18n: 'accessHistoryTracking', text: 'Access History Tracking' },
+            { i18n: 'emergencyOverride', text: 'Emergency Override' }
+        ]
+    },
+    {
+        image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80',
+        icon: 'fa-volume-up',
+        title: 'Audio & Communication',
+        desc: 'Installation of integrated sound systems (sound system) for homes and businesses, along with internal and external communication systems.',
+        i18nTitle: 'audioSystems',
+        i18nDesc: 'audioSystemsDesc',
+        features: [
+            { i18n: 'multiroomAudio', text: 'Multi-room Audio' },
+            { i18n: 'voiceIntercomSystems', text: 'Voice Intercom Systems' },
+            { i18n: 'smartSpeakerIntegration', text: 'Smart Speaker Integration' },
+            { i18n: 'customSoundZones', text: 'Custom Sound Zones' }
+        ]
+    },
+    {
+        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80',
+        icon: 'fa-network-wired',
+        title: 'Computers & Networks',
+        desc: 'Sale and maintenance of computers, networks, network amplifiers, and data centers using advanced technologies like MRT.',
+        i18nTitle: 'computerNetworks',
+        i18nDesc: 'computerNetworksDesc',
+        features: [
+            { i18n: 'networkInfrastructure', text: 'Network Infrastructure' },
+            { i18n: 'dataCenterSolutions', text: 'Data Center Solutions' },
+            { i18n: 'networkSecurity', text: 'Network Security' },
+            { i18n: 'cloudIntegration', text: 'Cloud Integration' }
+        ]
+    },
+    {
+        image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80',
+        icon: 'fa-satellite',
+        title: 'Satellite & Receivers',
+        desc: 'Installation and maintenance of satellite dishes and receiver systems for an excellent viewing experience.',
+        i18nTitle: 'satelliteSystems',
+        i18nDesc: 'satelliteSystemsDesc',
+        features: [
+            { i18n: 'hdSatelliteInstallation', text: 'HD Satellite Installation' },
+            { i18n: 'multiroomSetup', text: 'Multi-room Setup' },
+            { i18n: 'signalOptimization', text: 'Signal Optimization' },
+            { i18n: 'regularMaintenance', text: 'Regular Maintenance' }
+        ]
+    },
+    {
+        image: 'https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=600&q=80',
+        icon: 'fa-solar-panel',
+        title: 'Solar Solutions',
+        desc: 'Installation of solar energy systems for sustainable and environmentally friendly electricity generation.',
+        i18nTitle: 'solarSolutions',
+        i18nDesc: 'solarSolutionsDesc',
+        features: [
+            { i18n: 'solarPanelInstallation', text: 'Solar Panel Installation' },
+            { i18n: 'energyStorageSystems', text: 'Energy Storage Systems' },
+            { i18n: 'gridIntegration', text: 'Grid Integration' },
+            { i18n: 'maintenanceServices', text: 'Maintenance Services' }
+        ]
+    },
+    {
+        image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80',
+        icon: 'fa-lightbulb',
+        title: 'Smart Lighting',
+        desc: 'Comprehensive smart lighting solutions including indoor and outdoor lighting, automatic lighting systems with motion sensors, and motion-activated stair lighting for innovative and efficient illumination in homes and offices.',
+        i18nTitle: 'smartLighting',
+        i18nDesc: 'smartLightingDesc',
+        features: [
+            { i18n: 'automatedLightingControl', text: 'Automated Lighting Control' },
+            { i18n: 'motionSensorIntegration', text: 'Motion Sensor Integration' },
+            { i18n: 'energyEfficientLED', text: 'Energy-efficient LED Solutions' },
+            { i18n: 'customLightingScenes', text: 'Custom Lighting Scenes' }
+        ]
+    }
+];
+
+let currentServiceIndex = 0;
+
+function renderVerticalService(direction) {
+    const card = document.getElementById('verticalServiceCard');
+    if (!card) return;
+    card.classList.remove('fade-in');
+    void card.offsetWidth; // trigger reflow for restart animation
+    const lang = localStorage.getItem('language') || 'en';
+    const s = servicesData[currentServiceIndex];
+    card.innerHTML = `
+        <div class="service-image">
+            ${s.image ? `<img src="${s.image}" alt="${s.title}">` : ''}
+            <div class="service-icon"><i class="fas ${s.icon}"></i></div>
+        </div>
+        <div class="service-content">
+            <h3 data-i18n="${s.i18nTitle}">${translations[lang] && translations[lang][s.i18nTitle] ? translations[lang][s.i18nTitle] : s.title}</h3>
+            <p data-i18n="${s.i18nDesc}">${translations[lang] && translations[lang][s.i18nDesc] ? translations[lang][s.i18nDesc] : s.desc}</p>
+            ${s.features && s.features.length ? `<ul class="service-features-list">${s.features.map(f => `<li data-i18n="${f.i18n}">${translations[lang] && translations[lang][f.i18n] ? translations[lang][f.i18n] : f.text}</li>`).join('')}</ul>` : ''}
+        </div>
+    `;
+    setTimeout(() => card.classList.add('fade-in'), 10);
+}
+
+const prevBtn = document.getElementById('servicePrevBtn');
+const nextBtn = document.getElementById('serviceNextBtn');
+if (prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', () => {
+        currentServiceIndex = (currentServiceIndex - 1 + servicesData.length) % servicesData.length;
+        renderVerticalService('prev');
+    });
+    nextBtn.addEventListener('click', () => {
+        currentServiceIndex = (currentServiceIndex + 1) % servicesData.length;
+        renderVerticalService('next');
+    });
+}
+document.addEventListener('DOMContentLoaded', () => renderVerticalService());
+document.addEventListener('languageChanged', () => renderVerticalService()); 

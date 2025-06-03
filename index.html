@@ -109,48 +109,17 @@
         <div class="container">
             <div class="section-header">
                 <h2 data-i18n="ourServices">Our Services</h2>
-                <h3 data-i18n="servicesSubtitle">We offer comprehensive smart home and technology solutions</p>
+                <h3 data-i18n="servicesSubtitle">We offer comprehensive smart home and technology solutions</h3>
             </div>
-            <div class="services-grid">
-                <div class="service-row">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=400&fit=crop" alt="Smart Home Setup">
-                        <div class="service-icon">
-                            <i class="fas fa-home"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3 data-i18n="smartHomeSetup">Smart Home Setup</h3>
-                        <p data-i18n="smartHomeSetupDesc">Integrated control systems for lighting, heating, air conditioning, curtains, and other smart devices for comfort and ease of use.</p>
-                    </div>
+            <div class="vertical-service-wrapper">
+                <button class="service-nav-btn" id="servicePrevBtn" aria-label="Previous Service"><i class="fas fa-chevron-left"></i></button>
+                <div class="vertical-service-card" id="verticalServiceCard">
+                    <!-- Service content will be injected here by JS -->
                 </div>
-                <div class="service-row">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=400&fit=crop" alt="Security Systems">
-                        <div class="service-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3 data-i18n="securitySystems">Security & Monitoring</h3>
-                        <p data-i18n="securitySystemsDesc">Advanced solutions including CCTV installation and maintenance, video intercom systems, theft and fire alarms, and motion, gas, and water sensors for home and business protection.</p>
-                    </div>
-                </div>
-                <div class="service-row">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=400&fit=crop" alt="Smart Locks">
-                        <div class="service-icon">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3 data-i18n="smartLocks">Smart Locks</h3>
-                        <p data-i18n="smartLocksDesc">Modern security solutions through installation and maintenance of smart locks that enable easy and secure access control.</p>
-                    </div>
-                </div>
+                <button class="service-nav-btn" id="serviceNextBtn" aria-label="Next Service"><i class="fas fa-chevron-right"></i></button>
             </div>
             <div class="services-cta">
-                <a href="all-services.html" class="btn btn-primary" data-i18n="viewAllServices">View All Services</a>
+                <!-- All services are now shown here -->
             </div>
         </div>
     </section>
