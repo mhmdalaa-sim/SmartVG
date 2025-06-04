@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SmartVG</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/vega_group_transparent.png" alt="Banker Logo">
+                </a>
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" data-i18n="home">Home</a></li>
+                        <li><a href="products.html" data-i18n="products">Products</a></li>
+                        <li><a href="branches.html" data-i18n="branches">Branches</a></li>
+                        <li><a href="about.html" class="active" data-i18n="about">About</a></li>
+                        <li><a href="#services" data-i18n="services">Services</a></li>
+                        <li><a href="#contact" data-i18n="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-buttons">
+                    <button id="langSwitcher" class="btn btn-primary" data-i18n="language" onclick="switchLanguage()">العربية</button>
+                    <button class="mobile-menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Page Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="section-header">
+                <h2>About SmartVG</h2>
+                <p>Your Trusted Partner in Smart Technology Solutions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="about-main">
+        <div class="about-visual-wrapper">
+            <img src="images/about.png" alt="Vega Group Team" class="about-img-hero">
+            <div class="about-intro-text">
+                <h2 class="about-section-title">About SmartVG</h2>
+                <p style="font-size:1.1rem; color:#053393; font-weight:600; line-height:1.5; max-width:700px;">
+                    "Since 2009, Vega Group has been transforming lives with smart home automation, advanced security systems, and cutting-edge technology. As an authorized distributor for Sonoff and Lezn, we deliver trusted solutions tailored to your needs. Beyond technology, we offer premium gift customization services, combining innovation, creativity, and over 15 years of expertise to elevate your lifestyle"
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="about-cards-row">
+                <div class="about-card">
+                    <span class="about-card-title">Values</span>
+                    <p>We strive for continuous progress through innovation and quality in every product and service. We uphold integrity, transparency, and professionalism while supporting sustainability by delivering eco-friendly solutions that meet our clients' needs.</p>
+                </div>
+                <div class="about-card">
+                    <span class="about-card-title">Goal</span>
+                    <p>To achieve sustainable growth across all company sectors by expanding our customer base and increasing market share locally and regionally, while solidifying our position as a trusted and innovative provider of technical solutions.</p>
+                </div>
+                <div class="about-card">
+                    <span class="about-card-title">Mission</span>
+                    <p>We are committed to excellence by delivering innovative and high-quality services in technology, software, computers, and gift printing. Through adopting the latest technologies, we aim to enhance customer satisfaction and build long-lasting partnerships.</p>
+                </div>
+                <div class="about-card">
+                    <span class="about-card-title">Vision</span>
+                    <p>We aspire, with a forward-thinking vision, to be the leading company in Egypt and a pioneer in the Middle East in providing smart technology solutions and software. We focus on creativity and excellence to deliver a unique experience that meets our clients' aspirations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/vega_group_transparent.png" alt="Vega Group Logo">
+                    <p data-i18n="footerDesc">Smart Technology & Integrated Systems Since 2009</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="quickLinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="home">Home</a></li>
+                        <li><a href="about.html" data-i18n="about">About</a></li>
+                        <li><a href="#services" data-i18n="services">Services</a></li>
+                        <li><a href="#contact" data-i18n="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-i18n="contactTitle">Contact Us</h4>
+                    <ul class="footer-contact-list no-bullets">
+                        <li><i class="fas fa-phone-alt"></i> <span data-i18n="contactPhoneShort">01202062000 / 01282220220</span></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:vega.2010@yahoo.com" class="no-blue-link" style="color:#053393 !important;">vega.2010@yahoo.com</a></li>
+                        <li><i class="fas fa-globe"></i> <a href="https://vega-group.net/" target="_blank" class="no-blue-link" style="color:#053393 !important;">vega-group.net</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4 data-i18n="followUs">Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/Vegagroup.smart.home" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/@vegagroup.technology" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/vegagroup.smart" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@vega.group" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Vega Group. <span data-i18n="rights">All Rights Reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
