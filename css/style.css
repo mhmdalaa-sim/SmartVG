@@ -62,6 +62,33 @@ body {
     height: 40px;
 }
 
+.logo-v-shape {
+    width: 80px;
+    height: 62px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-right: 16px;
+    z-index: 10;
+    background: transparent;
+}
+.logo-v-shape .logo {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.logo-v-shape .logo img {
+    width: 36px;
+    height: auto;
+    margin-top: 0;
+    z-index: 2;
+}
+
 .nav-menu {
     flex: 1;
     display: flex;
@@ -815,6 +842,19 @@ body {
 .whatsapp-contact {
     text-align: center;
     margin-top: 30px;
+}
+
+.whatsapp-contact .whatsapp-image-button img {
+    height: 110px !important;
+    width: auto !important;
+    display: block;
+    box-shadow: 0 6px 24px rgba(44, 62, 80, 0.18);
+    border-radius: 18px;
+    transition: transform 0.2s;
+}
+.whatsapp-contact .whatsapp-image-button img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 32px rgba(5, 51, 147, 0.18);
 }
 
 .whatsapp-button {
@@ -2272,5 +2312,15 @@ html[dir="rtl"] .about-text ul {
     .about-section-title {
         font-size: 1.6rem;
         margin-bottom: 16px;
+    }
+}
+@media (max-width: 600px) {
+    .logo-v-shape {
+        width: 54px;
+        height: 40px;
+        margin-right: 6px;
+    }
+    .logo-v-shape .logo img {
+        width: 24px;
     }
 } 
