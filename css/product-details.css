@@ -149,4 +149,34 @@
     .product-info h1 {
         font-size: 1.8rem;
     }
+}
+
+body, .product-details, .product-details-content, .product-info, .product-features, .product-requirements {
+    background: #fff !important;
+    color: #053393 !important;
+}
+
+.product-details-title,
+.product-details-description,
+.product-details-features,
+.product-details-section-title,
+.product-details-section-content,
+.product-details-price,
+.product-details-label,
+.product-details-value {
+    color: #053393 !important;
+}
+
+.product-info h1,
+.product-info .product-price,
+.product-info .product-description,
+.product-features h3,
+.product-requirements h3,
+.product-features li,
+.product-requirements li {
+    color: #053393 !important;
+}
+
+.product-details-content {
+    border: 2px solid #053393 !important;
 } 
