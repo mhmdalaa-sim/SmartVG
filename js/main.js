@@ -98,59 +98,6 @@ const animateOnScroll = () => {
 window.addEventListener('scroll', animateOnScroll);
 window.addEventListener('load', animateOnScroll);
 
-// Add CSS class for mobile menu
-document.addEventListener('DOMContentLoaded', () => {
-    const style = document.createElement('style');
-    style.textContent = `
-        .nav-menu.active {
-            display: flex;
-            position: fixed;
-            top: 80px;
-            left: 0;
-            width: 100%;
-            background: var(--white);
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .nav-menu.active .nav-list {
-            flex-direction: column;
-            text-align: center;
-        }
-        
-        .mobile-menu-btn.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-        
-        .mobile-menu-btn.active span:nth-child(2) {
-            opacity: 0;
-        }
-        
-        .mobile-menu-btn.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -6px);
-        }
-        
-        .feature-card.animate,
-        .service-card.animate {
-            animation: fadeInUp 0.6s ease forwards;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    `;
-    document.head.appendChild(style);
-});
-
 // Review Modal Functionality
 const reviewModal = document.getElementById('reviewModal');
 const openReviewForm = document.getElementById('openReviewForm');
