@@ -2,7 +2,7 @@
 const products = [
     {
         id: 'smart-home-package',
-        category: 'Smart Home',
+        category: 'Smart Lightings',
         title: {
             en: 'Smart Home Package',
             ar: 'باقة المنزل الذكي'
@@ -19,7 +19,7 @@ const products = [
     },
     {
         id: 'security-system',
-        category: 'Security',
+        category: 'Security Cameras',
         title: {
             en: 'Security System',
             ar: 'نظام الأمان'
@@ -36,7 +36,7 @@ const products = [
     },
     {
         id: 'smart-lock',
-        category: 'Security',
+        category: 'Smart Locks',
         title: {
             en: 'Smart Lock',
             ar: 'قفل ذكي'
@@ -53,7 +53,7 @@ const products = [
     },
     {
         id: 'audio-system',
-        category: 'Audio',
+        category: 'Sound Systems',
         title: {
             en: 'Audio System',
             ar: 'نظام صوتي'
@@ -70,7 +70,7 @@ const products = [
     },
     {
         id: 'network-solution',
-        category: 'Networking',
+        category: 'Gateway Appliances',
         title: {
             en: 'Network Solution',
             ar: 'حل شبكات'
@@ -87,7 +87,7 @@ const products = [
     },
     {
         id: 'satellite-system',
-        category: 'Satellite',
+        category: 'Home Appliances',
         title: {
             en: 'Satellite System',
             ar: 'نظام أقمار صناعية'
@@ -104,7 +104,7 @@ const products = [
     },
     {
         id: 'solar-system',
-        category: 'Solar',
+        category: 'Smart Plugs',
         title: {
             en: 'Solar System',
             ar: 'نظام طاقة شمسية'
@@ -121,7 +121,7 @@ const products = [
     },
     {
         id: 'smart-lighting',
-        category: 'Smart Home',
+        category: 'Smart Lightings',
         title: {
             en: 'Smart Lighting',
             ar: 'إضاءة ذكية'
@@ -136,10 +136,9 @@ const products = [
         },
         image: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=400&fit=crop'
     },
-    // Additional products for better filter visibility
     {
         id: 'wifi-router',
-        category: 'Networking',
+        category: 'Gateway Appliances',
         title: {
             en: 'WiFi Router',
             ar: 'راوتر واي فاي'
@@ -156,7 +155,7 @@ const products = [
     },
     {
         id: 'solar-battery',
-        category: 'Solar',
+        category: 'Smart Plugs',
         title: {
             en: 'Solar Battery',
             ar: 'بطارية شمسية'
@@ -173,7 +172,7 @@ const products = [
     },
     {
         id: 'doorbell-camera',
-        category: 'Security',
+        category: 'Security Cameras',
         title: {
             en: 'Doorbell Camera',
             ar: 'كاميرا جرس الباب'
@@ -190,7 +189,7 @@ const products = [
     },
     {
         id: 'bluetooth-speaker',
-        category: 'Audio',
+        category: 'Sound Systems',
         title: {
             en: 'Bluetooth Speaker',
             ar: 'سماعة بلوتوث'
@@ -231,15 +230,40 @@ let selectedCategory = 'all';
 
 function renderCategoryFilter() {
     if (!categoryFilterList) return;
-    const categories = Array.from(new Set(products.map(p => p.category)));
+    const categories = [
+        'Smart Locks',
+        'Access Control',
+        'Sound Systems',
+        'EWE Link Products',
+        'Tuya Products',
+        'RF Sensors',
+        'Security Cameras',
+        'DIY Smart Switches',
+        'Central Control Panel',
+        'Gateway Appliances',
+        'Smart Plugs',
+        'Smart Lightings',
+        'Accessories',
+        'Smart Wall Switches',
+        'Home Appliances'
+    ];
     const lang = localStorage.getItem('language') || 'en';
     const categoryI18n = {
-        'Smart Home': 'categorySmartHome',
-        'Security': 'categorySecurity',
-        'Audio': 'categoryAudio',
-        'Networking': 'categoryNetworking',
-        'Satellite': 'categorySatellite',
-        'Solar': 'categorySolar'
+        'Smart Locks': 'categorySmartLocks',
+        'Access Control': 'categoryAccessControl',
+        'Sound Systems': 'categorySoundSystems',
+        'EWE Link Products': 'categoryEWELink',
+        'Tuya Products': 'categoryTuya',
+        'RF Sensors': 'categoryRFSensors',
+        'Security Cameras': 'categorySecurityCameras',
+        'DIY Smart Switches': 'categoryDIYSwitches',
+        'Central Control Panel': 'categoryControlPanel',
+        'Gateway Appliances': 'categoryGateway',
+        'Smart Plugs': 'categorySmartPlugs',
+        'Smart Lightings': 'categorySmartLighting',
+        'Accessories': 'categoryAccessories',
+        'Smart Wall Switches': 'categoryWallSwitches',
+        'Home Appliances': 'categoryHomeAppliances'
     };
     const allBtn = `<button class="category-filter-btn${selectedCategory === 'all' ? ' selected' : ''}" data-category="all">${translations[lang].allCategories || 'All Categories'}</button>`;
     const btns = categories.map(cat => {
