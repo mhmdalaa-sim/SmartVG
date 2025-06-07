@@ -2634,4 +2634,54 @@ html[dir="rtl"] .about-text ul {
         width: 70px;
         height: 70px;
     }
+}
+
+/* Brands Section Styles */
+.brands-section {
+    padding: 80px 0;
+    background: var(--white);
+    text-align: center;
+}
+
+.brands-carousel-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 40px;
+    position: relative;
+}
+
+.brands-carousel-track {
+    display: flex;
+    width: fit-content;
+    animation: scrollBrands 30s linear infinite;
+}
+
+.brands-carousel-track img {
+    height: 80px; /* Adjust as needed */
+    margin: 0 20px;
+    object-fit: contain;
+    flex-shrink: 0;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+@keyframes scrollBrands {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+    .brands-carousel-track img {
+        height: 60px;
+        margin: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brands-carousel-track img {
+        height: 50px;
+        margin: 0 10px;
+    }
 } 

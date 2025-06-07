@@ -274,6 +274,7 @@ const translations = {
         reviews: 'Reviews',
         ourPartners: 'Our Partners',
         ourProjects: 'Our Projects',
+        ourBrands: 'Our Brands',
         // New Products
         wifiRouter: 'WiFi Router',
         solarBattery: 'Solar Battery',
@@ -594,6 +595,7 @@ const translations = {
         reviews: 'المراجعات',
         ourPartners: 'شركاؤنا',
         ourProjects: 'مشاريعنا',
+        ourBrands: 'علاماتنا التجارية',
         // New Products
         wifiRouter: 'راوتر واي فاي',
         solarBattery: 'بطارية شمسية',
