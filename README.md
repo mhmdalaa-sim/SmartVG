@@ -1,6 +1,5 @@
-# Banker - Modern Banking Website Template
+# VagaGroup Smart Home Solutions
 
-A modern, responsive banking website template built with HTML, CSS, and JavaScript. This template is inspired by the Banker template from Colorlib.
 
 ## Features
 
