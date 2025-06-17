@@ -1,208 +1,310 @@
 // Product data with translations and categories
 const products = [
     {
-        id: 'smart-home-package',
-        category: 'Smart Lightings',
+        id: 'smart-lighting',
+        category: 'Smart Lighting',
         title: {
-            en: 'Smart Home Package',
-            ar: 'باقة المنزل الذكي'
+            en: 'Smart Lighting Solutions',
+            ar: 'حلول الإضاءة الذكية'
         },
         description: {
-            en: 'Complete smart home automation package including lighting, climate control, and security systems.',
-            ar: 'باقة متكاملة لأتمتة المنزل الذكي تشمل الإضاءة والتحكم في المناخ وأنظمة الأمان.'
+            en: 'Advanced smart lighting solutions for homes and businesses with automated control and energy efficiency.',
+            ar: 'حلول إضاءة ذكية متقدمة للمنازل والشركات مع تحكم آلي وكفاءة في استهلاك الطاقة.'
         },
         price: {
-            en: 'Starting from $2,000',
-            ar: 'تبدأ من ٢٠٠٠ دولار'
+            en: 'Contact for Pricing',
+            ar: 'اتصل للاستفسار عن الأسعار'
         },
-        image: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=400&fit=crop'
+        pdfLink: 'products/Smart lighting.pdf'
     },
     {
-        id: 'security-system',
+        id: 'security-cameras',
         category: 'Security Cameras',
         title: {
-            en: 'Security System',
-            ar: 'نظام الأمان'
+            en: 'Security Camera Systems',
+            ar: 'أنظمة كاميرات المراقبة'
         },
         description: {
-            en: 'Advanced security system with CCTV cameras, motion sensors, and 24/7 monitoring.',
-            ar: 'نظام أمان متقدم مع كاميرات مراقبة وحساسات حركة ومراقبة على مدار الساعة.'
+            en: 'High-quality security camera systems with advanced features for complete surveillance.',
+            ar: 'أنظمة كاميرات مراقبة عالية الجودة مع ميزات متقدمة للمراقبة الشاملة.'
         },
         price: {
-            en: 'Starting from $1,500',
-            ar: 'تبدأ من ١٥٠٠ دولار'
+            en: 'Contact for Pricing',
+            ar: 'اتصل للاستفسار عن الأسعار'
         },
-        image: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=400&fit=crop'
+        pdfLink: 'products/Security Cameras.pdf'
     },
     {
-        id: 'smart-lock',
+        id: 'lzen-smart-locks',
         category: 'Smart Locks',
         title: {
-            en: 'Smart Lock',
-            ar: 'قفل ذكي'
+            en: 'Lzen Smart Locks',
+            ar: 'أقفال ليزن الذكية'
         },
         description: {
-            en: 'Lezn Vega Smart Lock with biometric access, mobile app control, and facial recognition.',
-            ar: 'قفل ليزن فيجا الذكي مع وصول بيومتري وتحكم عبر تطبيق الجوال والتعرف على الوجه.'
+            en: 'Advanced smart lock systems with biometric access and mobile app control.',
+            ar: 'أنظمة أقفال ذكية متقدمة مع وصول بيومتري وتحكم عبر تطبيق الجوال.'
         },
         price: {
-            en: 'Starting from $300',
-            ar: 'تبدأ من ٣٠٠ دولار'
+            en: 'Contact for Pricing',
+            ar: 'اتصل للاستفسار عن الأسعار'
         },
-        image: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=400&fit=crop'
+        pdfLink: 'products/Smart Locks/Lzen smart locks.pdf'
     },
     {
-        id: 'audio-system',
+        id: 'pnda-smart-locks',
+        category: 'Smart Locks',
+        title: {
+            en: 'PNDA Smart Locks',
+            ar: 'أقفال بندا الذكية'
+        },
+        description: {
+            en: 'Professional smart lock systems with advanced security features.',
+            ar: 'أنظمة أقفال ذكية احترافية مع ميزات أمان متقدمة.'
+        },
+        price: {
+            en: 'Contact for Pricing',
+            ar: 'اتصل للاستفسار عن الأسعار'
+        },
+        pdfLink: 'products/Smart Locks/PNDA smart locks.pdf'
+    },
+    {
+        id: 'master-team-sound',
         category: 'Sound Systems',
         title: {
-            en: 'Audio System',
-            ar: 'نظام صوتي'
+            en: 'Master Team Sound Systems',
+            ar: 'أنظمة صوت ماستر تيم'
         },
         description: {
-            en: 'Premium sound system with multi-room audio and wireless connectivity.',
-            ar: 'نظام صوتي فاخر مع صوت متعدد الغرف واتصال لاسلكي.'
+            en: 'Premium sound systems with multi-room audio and wireless connectivity.',
+            ar: 'أنظمة صوتية فاخرة مع صوت متعدد الغرف واتصال لاسلكي.'
         },
         price: {
-            en: 'Starting from $800',
-            ar: 'تبدأ من ٨٠٠ دولار'
+            en: 'Contact for Pricing',
+            ar: 'اتصل للاستفسار عن الأسعار'
         },
-        image: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=400&fit=crop'
+        pdfLink: 'products/Sound System/Master Team Q2 2025 Pricelist.pdf'
     },
     {
-        id: 'network-solution',
-        category: 'Gateway Appliances',
+        id: 'sonoff-sound',
+        category: 'Sound Systems',
         title: {
-            en: 'Network Solution',
-            ar: 'حل شبكات'
+            en: 'Sonoff Surpass Sound System',
+            ar: 'نظام صوت سونوف سيرباس'
         },
         description: {
-            en: 'Professional network infrastructure with high-speed connectivity and security.',
-            ar: 'بنية تحتية شبكية احترافية مع اتصال عالي السرعة وأمان.'
+            en: 'High-quality sound systems with advanced features and easy integration.',
+            ar: 'أنظمة صوتية عالية الجودة مع ميزات متقدمة وتكامل سهل.'
         },
         price: {
-            en: 'Starting from $1,000',
-            ar: 'تبدأ من ١٠٠٠ دولار'
+            en: 'Contact for Pricing',
+            ar: 'اتصل للاستفسار عن الأسعار'
         },
-        image: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=400&fit=crop'
+        pdfLink: 'products/Sound System/Sonoff - Surpass Sound System.pdf'
     },
     {
-        id: 'satellite-system',
+        id: 'gateway-sensors',
+        category: 'Gateway & Sensors',
+        title: {
+            en: 'Gateway & Sensor Solutions',
+            ar: 'حلول البوابات والمستشعرات'
+        },
+        description: {
+            en: 'Comprehensive gateway and sensor solutions for smart home automation.',
+            ar: 'حلول شاملة للبوابات والمستشعرات لأتمتة المنزل الذكي.'
+        },
+        price: {
+            en: 'Contact for Pricing',
+            ar: 'اتصل للاستفسار عن الأسعار'
+        },
+        pdfLink: 'products/Gatway & Sensors.pdf'
+    },
+    {
+        id: 'home-appliances',
         category: 'Home Appliances',
         title: {
-            en: 'Satellite System',
-            ar: 'نظام أقمار صناعية'
+            en: 'Smart Home Appliances',
+            ar: 'الأجهزة المنزلية الذكية'
         },
         description: {
-            en: 'Complete satellite and TV system installation with premium channels.',
-            ar: 'تركيب نظام أقمار صناعية وتلفزيون متكامل مع قنوات فاخرة.'
+            en: 'Smart home appliances for modern living with advanced features.',
+            ar: 'أجهزة منزلية ذكية للحياة العصرية مع ميزات متقدمة.'
         },
         price: {
-            en: 'Starting from $400',
-            ar: 'تبدأ من ٤٠٠ دولار'
+            en: 'Contact for Pricing',
+            ar: 'اتصل للاستفسار عن الأسعار'
         },
-        image: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=400&fit=crop'
+        pdfLink: 'products/Home Appliances.pdf'
     },
     {
-        id: 'solar-system',
+        id: 'smart-plugs',
         category: 'Smart Plugs',
         title: {
-            en: 'Solar System',
-            ar: 'نظام طاقة شمسية'
+            en: 'Smart Plug Solutions',
+            ar: 'حلول المقابس الذكية'
         },
         description: {
-            en: 'Efficient solar energy system for sustainable power generation.',
-            ar: 'نظام طاقة شمسية فعال لتوليد الطاقة المستدامة.'
+            en: 'Energy-efficient smart plugs for automated power control.',
+            ar: 'مقابس ذكية موفرة للطاقة للتحكم الآلي في الطاقة.'
         },
         price: {
-            en: 'Starting from $3,000',
-            ar: 'تبدأ من ٣٠٠٠ دولار'
+            en: 'Contact for Pricing',
+            ar: 'اتصل للاستفسار عن الأسعار'
         },
-        image: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=400&fit=crop'
+        pdfLink: 'products/Smart Plugs.pdf'
     },
     {
-        id: 'smart-lighting',
-        category: 'Smart Lightings',
+        id: 'pnda-access-control',
+        category: 'Access Control',
         title: {
-            en: 'Smart Lighting',
-            ar: 'إضاءة ذكية'
+            en: 'PNDA Access Control',
+            ar: 'تحكم في الوصول بندا'
         },
         description: {
-            en: 'Innovative lighting system with automated control and energy efficiency.',
-            ar: 'نظام إضاءة مبتكر مع تحكم آلي وكفاءة في استهلاك الطاقة.'
+            en: 'Advanced access control systems for enhanced security.',
+            ar: 'أنظمة تحكم متقدمة في الوصول لأمان محسن.'
         },
         price: {
-            en: 'Starting from $600',
-            ar: 'تبدأ من ٦٠٠ دولار'
+            en: 'Contact for Pricing',
+            ar: 'اتصل للاستفسار عن الأسعار'
         },
-        image: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=600&h=400&fit=crop'
+        pdfLink: 'products/Access Control/PNDA- Access Control.pdf'
     },
     {
-        id: 'wifi-router',
-        category: 'Gateway Appliances',
+        id: 'sib-access-control',
+        category: 'Access Control',
         title: {
-            en: 'WiFi Router',
-            ar: 'راوتر واي فاي'
+            en: 'SIB Access Control',
+            ar: 'تحكم في الوصول سيب'
         },
         description: {
-            en: 'High-speed WiFi router for home and office use.',
-            ar: 'راوتر واي فاي عالي السرعة للاستخدام المنزلي والمكتبي.'
+            en: 'Professional access control systems with advanced features.',
+            ar: 'أنظمة تحكم احترافية في الوصول مع ميزات متقدمة.'
         },
         price: {
-            en: 'Starting from $120',
-            ar: 'تبدأ من ١٢٠ دولار'
+            en: 'Contact for Pricing',
+            ar: 'اتصل للاستفسار عن الأسعار'
         },
-        image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=600&h=400&fit=crop'
+        pdfLink: 'products/Access Control/SIB Access Control.pdf'
     },
     {
-        id: 'solar-battery',
-        category: 'Smart Plugs',
+        id: 'central-control',
+        category: 'Central Control Panels',
         title: {
-            en: 'Solar Battery',
-            ar: 'بطارية شمسية'
+            en: 'Central Control Systems',
+            ar: 'أنظمة التحكم المركزية'
         },
         description: {
-            en: 'Long-lasting battery for solar energy storage.',
-            ar: 'بطارية طويلة العمر لتخزين الطاقة الشمسية.'
+            en: 'Centralized control panels for managing all smart home systems.',
+            ar: 'لوحات تحكم مركزية لإدارة جميع أنظمة المنزل الذكي.'
         },
         price: {
-            en: 'Starting from $350',
-            ar: 'تبدأ من ٣٥٠ دولار'
+            en: 'Contact for Pricing',
+            ar: 'اتصل للاستفسار عن الأسعار'
         },
-        image: 'https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=600&h=400&fit=crop'
+        pdfLink: 'products/Central Control Panels.pdf'
     },
     {
-        id: 'doorbell-camera',
-        category: 'Security Cameras',
+        id: 'smart-switches',
+        category: 'Smart Wall Switches',
         title: {
-            en: 'Doorbell Camera',
-            ar: 'كاميرا جرس الباب'
+            en: 'Smart Wall Switches',
+            ar: 'مفاتيح الحائط الذكية'
         },
         description: {
-            en: 'Smart doorbell camera with mobile notifications.',
-            ar: 'جرس باب ذكي مع كاميرا وإشعارات على الجوال.'
+            en: 'Modern smart wall switches for automated lighting control.',
+            ar: 'مفاتيح حائط ذكية حديثة للتحكم الآلي في الإضاءة.'
         },
         price: {
-            en: 'Starting from $90',
-            ar: 'تبدأ من ٩٠ دولار'
+            en: 'Contact for Pricing',
+            ar: 'اتصل للاستفسار عن الأسعار'
         },
-        image: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?w=600&h=400&fit=crop'
+        pdfLink: 'products/Smart Wall Switches.pdf'
     },
     {
-        id: 'bluetooth-speaker',
-        category: 'Sound Systems',
+        id: 'diy-switches',
+        category: 'DIY Smart Switches',
         title: {
-            en: 'Bluetooth Speaker',
-            ar: 'سماعة بلوتوث'
+            en: 'DIY Smart Switches',
+            ar: 'مفاتيح ذكية للتركيب الذاتي'
         },
         description: {
-            en: 'Portable Bluetooth speaker with high-quality sound.',
-            ar: 'سماعة بلوتوث محمولة بصوت عالي الجودة.'
+            en: 'Easy-to-install DIY smart switches for home automation.',
+            ar: 'مفاتيح ذكية سهلة التركيب للتركيب الذاتي لأتمتة المنزل.'
         },
         price: {
-            en: 'Starting from $60',
-            ar: 'تبدأ من ٦٠ دولار'
+            en: 'Contact for Pricing',
+            ar: 'اتصل للاستفسار عن الأسعار'
         },
-        image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&h=400&fit=crop'
+        pdfLink: 'products/DIY Smart Switches.pdf'
+    },
+    {
+        id: 'rf-sensors',
+        category: 'RF Sensors',
+        title: {
+            en: 'RF Sensor Solutions',
+            ar: 'حلول مستشعرات التردد اللاسلكي'
+        },
+        description: {
+            en: 'Advanced RF sensors for smart home automation and control.',
+            ar: 'مستشعرات تردد لاسلكي متقدمة لأتمتة المنزل الذكي والتحكم.'
+        },
+        price: {
+            en: 'Contact for Pricing',
+            ar: 'اتصل للاستفسار عن الأسعار'
+        },
+        pdfLink: 'products/RF Sensors.pdf'
+    },
+    {
+        id: 'tuya-products',
+        category: 'Tuya Products',
+        title: {
+            en: 'Tuya Smart Solutions',
+            ar: 'حلول تويو الذكية'
+        },
+        description: {
+            en: 'Comprehensive range of Tuya smart home products and solutions.',
+            ar: 'مجموعة شاملة من منتجات وحلول تويو للمنزل الذكي.'
+        },
+        price: {
+            en: 'Contact for Pricing',
+            ar: 'اتصل للاستفسار عن الأسعار'
+        },
+        pdfLink: 'products/Tuya Products.pdf'
+    },
+    {
+        id: 'ewelink-products',
+        category: 'Ewelink Products',
+        title: {
+            en: 'Ewelink Smart Solutions',
+            ar: 'حلول إيولينك الذكية'
+        },
+        description: {
+            en: 'Wide range of Ewelink smart home products and accessories.',
+            ar: 'مجموعة واسعة من منتجات وإكسسوارات إيولينك للمنزل الذكي.'
+        },
+        price: {
+            en: 'Contact for Pricing',
+            ar: 'اتصل للاستفسار عن الأسعار'
+        },
+        pdfLink: 'products/Ewelink Products.pdf'
+    },
+    {
+        id: 'accessories',
+        category: 'Accessories',
+        title: {
+            en: 'Smart Home Accessories',
+            ar: 'إكسسوارات المنزل الذكي'
+        },
+        description: {
+            en: 'Essential accessories and add-ons for your smart home system.',
+            ar: 'إكسسوارات وإضافات أساسية لنظام المنزل الذكي الخاص بك.'
+        },
+        price: {
+            en: 'Contact for Pricing',
+            ar: 'اتصل للاستفسار عن الأسعار'
+        },
+        pdfLink: 'products/Accessories.pdf'
     }
 ];
 
@@ -305,29 +407,17 @@ function displayProducts() {
     const endIndex = startIndex + itemsPerPage;
     const currentProducts = filteredProducts.slice(startIndex, endIndex);
     const currentLang = localStorage.getItem('language') || 'en';
-    const productI18n = {
-        'WiFi Router': 'wifiRouter',
-        'Solar Battery': 'solarBattery',
-        'Doorbell Camera': 'doorbellCamera',
-        'Bluetooth Speaker': 'bluetoothSpeaker'
-    };
 
     productsGrid.innerHTML = currentProducts.map((product, index) => {
         const actualIndex = startIndex + index;
-        let title = product.title[currentLang];
-        if (productI18n[product.title.en] && translations[currentLang][productI18n[product.title.en]]) {
-            title = translations[currentLang][productI18n[product.title.en]];
-        }
+        const title = product.title[currentLang];
         return `
             <div class="product-card">
-                <div class="product-image">
-                    <img src="${product.image}" alt="${title}">
-                </div>
                 <div class="product-content">
                     <h3>${title}</h3>
                     <p class="product-description">${product.description[currentLang]}</p>
                     <div class="product-price">${product.price[currentLang]}</div>
-                    <a href="product-details.html?id=${product.id}" class="btn btn-primary" data-i18n="learnMore">${translations[currentLang].learnMore}</a>
+                    <a href="${product.pdfLink}" class="btn btn-primary" target="_blank" data-i18n="learnMore">${translations[currentLang].learnMore}</a>
                 </div>
             </div>
         `;
