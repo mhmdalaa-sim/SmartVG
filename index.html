@@ -46,7 +46,9 @@
             <div class="hero-content">
                 <h1 data-i18n="heroTitle">Welcome to SmartVG</h1>
                 <div class="hero-image">
-                    <img src="images/Home.png" alt="SmartVG Hero Image">
+                    <video id="heroVideo" src="images/مواكبة التطور التكنولوجي هو أول أهداف Vega Group.mp4" poster="images/Home.png" autoplay muted loop playsinline style="width:100%;height:auto;border-radius:18px;box-shadow:0 10px 30px rgba(0, 0, 0, 0.2);">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 <p data-i18n="heroDescription">Your trusted partner in financial growth and prosperity. We provide innovative solutions to help you achieve your financial goals.</p>
                 
@@ -206,8 +208,9 @@
             <div class="section-header">
                 <h2 data-i18n="reviews">Reviews</h2>
             </div>
-            <div class="reviews-content">
-                <img src="images/Reviews.png" alt="Customer Reviews" class="reviews-image">
+            <div class="reviews-content" style="flex-direction: column; gap: 16px;">
+                <img src="images/ReviewsAct.jpeg" alt="Customer Reviews - Recent" class="reviews-image" style="border-radius: 16px; width: 90%; height: auto; display: block; margin: 0 auto;">
+                <img src="images/Reviews.png" alt="Customer Reviews - Previous" class="reviews-image">
             </div>
             <div class="reviews-cta">
                 <button class="btn btn-primary" id="openReviewForm">
