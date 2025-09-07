@@ -1091,7 +1091,7 @@ body {
 .about-image {
     flex: 1 1 340px;
     min-width: 280px;
-    max-width: 420px;
+    max-width: 700px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1100,7 +1100,7 @@ body {
 
 .about-image img {
     width: 100%;
-    max-width: 180px;
+    max-width: 100%;
     border-radius: 18px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.10);
 }
@@ -1193,7 +1193,7 @@ body {
         padding: 0;
     }
     .about-image img {
-        max-width: 150px;
+        max-width: 100%;
     }
 }
 
@@ -1202,13 +1202,13 @@ body {
         padding: 18px 2vw 12px 2vw;
     }
     .about-image img {
-        max-width: 120px;
+        max-width: 100%;
     }
 }
 
 @media (max-width: 480px) {
     .about-image img {
-        max-width: 100px;
+        max-width: 100%;
     }
 }
 
@@ -1231,7 +1231,7 @@ html[dir="rtl"] .about-text ul {
         padding: 18px 2vw 12px 2vw;
     }
     .about-image img {
-        max-width: 120px;
+        max-width: 100%;
     }
 }
 
